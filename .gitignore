@@ -2,3 +2,16 @@
 db/*.sqlite3
 log/*.log
 tmp/
+
+
+.project
+config/database.yml
+
+public/system/*
+
+db/schema.rb
+
+.idea/*
+
+rails_best_practices_output.html
+public/ckeditor_assets/*
