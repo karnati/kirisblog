@@ -1,0 +1,14 @@
+<div style="background-color:#1e4262; width:100%;">
+<!-- <div style="margin:0px; padding:0px 0px 0px 280px; float:left; background-color:#1e4262; width:79.3%; ">  -->
+	<div style="margin:0px; padding:0px 0px 0px 280px;  background-color:#1e4262; ">  
+
+<div id="tabs">
+
+   <ul>
+            <li><%= link_to "Dashboard",admin_dashboard_index_path,  :class=>(controller_name == 'dashboard' ? "active" : "")%></li>
+            <li><%= link_to "Articles",admin_articles_path,  :class=>(controller_name == 'articles' ? "active" : "") %></li>
+   </ul>
+
+ </div>
+ </div>
+ </div> 

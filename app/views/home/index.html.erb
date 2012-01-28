@@ -1,0 +1,48 @@
+     <div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <p>
+      <%= render "/common/comment" %>
+      </p>
+      </div>
+</div>
+<% @articles.each do |article| %>
+<div class="post" style="padding-top: 57px;">
+  <h3 class="date"><%= article.created_at.strftime("%B %d, %Y") %> </h3>
+  <h2 class="title"><%= article.title %></h2>
+
+  <div class="entry">
+    <p><%= article.description %></p>
+  </div>
+  <p class="meta">
+    <%= link_to "Read More ...",home_path(article.title),:class => "more" %> <b>|</b>
+    <a href="#" class="comments"> View Comments (<%= article.comments.count%>)</a>
+     <%= link_to "Post a Comment", "#", :class => 'block ', :id => "button", :title => "Post a Comment" %>
+
+  </p>
+</div>
+
+ <% end %>
+
+
+<style>
+    .toggler { width: 500px;  }
+    #button { padding: .5em 1em; text-decoration: none; }
+    #effect { width: 223px;  padding: 4px 4px 6px 9px; position: relative; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+</style>
+        <script>
+// script for toggle the comment
+$(function() {
+    $( "#effect" ).hide();
+    function runEffect() {
+        var selectedEffect = "blind";
+        var options = {};
+        $( "#effect" ).toggle( selectedEffect, options, 500 );
+    };
+    $( "#button" ).click(function() {
+        runEffect();
+        return false;
+    });
+});
+
+    </script>

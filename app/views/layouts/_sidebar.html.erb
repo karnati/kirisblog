@@ -1,0 +1,55 @@
+<div id="about-box">
+  <h2>Credit Features</h2>
+  <p>You can start by browsing our card categories or the banks
+    and card issuers below. You can also compare credit cards.</p>
+</div>
+<ul>
+
+
+  <li>
+    <h2>Archive</h2>
+    <ul>
+      <li><div  >
+        <% @articles_by_year.each do |year, posts| %>
+            <a class="trigger" href="#"><%= year%> (<%= posts.count %> ) </a>
+            <ul class="level1">
+              <% posts.group_by { |post| post.created_at.strftime("%B") }.each do |month, articles| %>
+                  <li><a class="trigger" href="#"><%= month %>  (<%= articles.count %>)</a>
+                    <ul class="level2">
+                      <% articles.each do |article| %>
+                          <li style="width: 190px; font-size: 13px;"><%= link_to article.title, home_path(article.title) %></li>
+                      <% end %>
+                    </ul>
+                  </li>
+              <% end %>
+            </ul>
+            <div style="clear:both"></div>
+        <% end %>
+      </div></li>
+    </ul>
+  </li>
+
+
+  <li>
+    <h2>Recent Articles</h2>
+    <ul>
+      <% @recent_articles.each do |article| %>
+          <li><%= link_to truncate(article.title, :length => 25),home_path(article.title) %></li>
+      <% end %>
+    </ul>
+  </li>
+<!--
+  <li>
+    <h2>Recent Comments</h2>
+    <ul>
+      <li><a href="#">comment1</a></li>
+      <li><a href="#">comment2</a></li>
+      <li><a href="#">comment3</a></li>
+      <li><a href="#">comment4</a></li>
+      <li><a href="#">comment5</a></li>
+
+    </ul>
+  </li>
+-->
+
+</ul>

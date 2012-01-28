@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- START:jit -->
+<html>
+<head>
+  <title><%= content_for?(:title) ? content_for(:title) : 'Kiris Blog' %></title>
+  <link rel="shortcut icon" href="/favicon.png" />
+  <%= stylesheet_link_tag 'admin_screen','tablesorter', :media => "all"  %>
+  <%= javascript_include_tag :defaults  %>
+  <%= csrf_meta_tag %>
+</head>
+<!-- END:jit -->
+
+<body id="store">
+<%= render :partial=>'layouts/admin/header' %>
+<%= render :partial=>'layouts/admin/menu' %>
+<!--START FLASH -->
+<div id="flash" style="display: none;"></div>
+
+<!-- END FLASH -->
+
+<table class="tabbed" height="100%" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <!-- Start SIDE BAR -->
+    <td id="sidebar" class="sidebar" valign="top">
+      <div class="filters">
+        <!--  Search bar -->
+        <h4>Search Articles</h4><div style="margin: 0px 0px 6px;">
+        <%#= form_tag(search_cities_path, :method=>'get') do %>
+            <table>
+              <tr>
+                <td><%= text_field_tag :search%></td>
+                <td><%= submit_tag "Search"%> </td>
+              </tr>
+            </table>
+        <%# end %>
+      </div>
+
+        <!--  Ajax Radio buttons approved or suspended (Side bar) -->
+        <div id="snapshot">
+          <%#=render :partial=>'administrators/users/snapshot' %>
+        </div>
+        <!-- end -->
+
+      </div>
+      <div class="panel">
+        <div class="caption">Recent Articles        </div>
+        <div id="recently">
+          <%# @recent.each do |admin| %>
+              <li id="recent_admin_<%#= admin.id %>" class="">
+                <dt><%#= link_to admin.name,  city_path(admin) %></dt>
+                <tt><br /></tt>
+              </li>
+          <%# end %>
+        </div>
+      </div>
+
+
+    </td>
+
+    <!-- END SIDE BAR-->
+    <td id="main" class="main" valign="top">
+      <br />
+
+      <br />
+        <div class="title_tools"><abbr id="right_arrow">►</abbr>&nbsp;
+
+				                 <%= link_to 'New Article', new_admin_article_path %>   &nbsp;&nbsp;&nbsp;
+				    </div>
+
+      <div class="title">
+        <span>Articles Management</span>
+
+        <img alt="Loading" id="loading" src="/images/spinner.gif" style="display: none;" width="16" height="16"/>
+      </div>
+      <%=render  'layouts/admin/import_flash'%>
+      <%=yield%>
+    </td>
+  </tr>
+</table>
+<%=render :partial=>'layouts/admin/footer'%>
+</body>
+</html>

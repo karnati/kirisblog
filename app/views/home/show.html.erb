@@ -1,0 +1,29 @@
+<div class="post" style="padding-top: 57px;">
+  <h2 class="title"><%= @article.title %></h2> <br/>    <br/>
+  <h3 class="date"><%= @article.created_at.strftime("%B %d, %Y") %> </h3>
+  <div class="entry">
+    <p><%= @article.description %></p>
+  </div>
+
+  <h2>Comments</h2>
+  <% @comments.each do |comment| %>
+      <%= comment.name %> says:<br/>
+  <%= comment.description %><br/>
+  <% end %>
+
+
+  <h2>Leave a Reply</h2>
+   <%= form_for @comment, :url=> {:controller => "home", :action => "create"}, :validate => true do |f| %>
+   Name: <%= f.text_field :name %>   <br/>
+   Email: <%= f.text_field :email %> <br/>
+   Website : <%= f.text_field :website %> <br/>
+   Description : <%= f.text_field :description %> <br/>
+       <%= hidden_field_tag :title,  @article.title %>
+       <%= f.submit %>
+   <% end %>
+
+
+</div>
+
+
+

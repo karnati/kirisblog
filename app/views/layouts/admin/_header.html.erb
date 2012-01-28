@@ -1,0 +1,16 @@
+ <% cache("header") do %>
+    <div id="header">
+        <div id="welcome"><!--  <b> <%#= current_administrator.username%> , Hospital_id : <%#= current_administrator.hospital_id%> , Location_id : <%#= current_administrator.location_id%></b>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+            <b><%= Date.today.strftime("%d - %h - %Y ( %A )") %></b> <span id="welcome_username"></span>
+            <span>&nbsp;&nbsp;</span>           
+            |<%= link_to 'Profile'  %>  <!-- logged_in_user_profile_path-->
+            |<%= link_to 'Logout'  %>  <!-- destroy_user_session_path -->
+            <br /><br />
+            <b>Hospital</b>  : <%#= current_administrator.hospital_id.blank? ? "Anil Diabetes Centre" : hospital_name(current_administrator) %><br /><br />
+            <b>Location</b> : <%#= current_administrator.location_id.blank? ? "- - - -" : location_name(current_administrator) %>
+        </div>
+        <h3><%= link_to image_tag("/images/hms_logo.png", :border => 0, :height=>"88px" ,:width=>"200px",:title => 'Hospital Management System'), root_path %></h3><!--root_path -->
+    </div>
+
+<% end %>
