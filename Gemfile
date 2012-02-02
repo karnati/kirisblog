@@ -13,7 +13,7 @@ gem "devise", "1.4.8"
 gem "ckeditor", "3.6.3"
 
 
-  gem "pg"
+  #gem "pg"
 
 #gem "simple_form"
 # Use unicorn as the web server
