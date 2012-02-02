@@ -1,4 +1,5 @@
 
+
 body {
 	margin: 0;
 	padding: 0;
@@ -75,7 +76,9 @@ img.right {
 	margin: 0 0 0 15px;
 }
 
+
 /* Header */
+
 
 #header {
 	width: 954px;
@@ -84,7 +87,9 @@ img.right {
 	//background: url("/images/img02.jpg");
 }
 
+
 /* Logo */
+
 
 #logo {
 	float: left;
@@ -114,6 +119,7 @@ img.right {
 
 /* Menu */
 
+
 #menu {
 	float: right;
 }
@@ -138,13 +144,19 @@ img.right {
 	color: #FFFFFF;
 }
 
+
 /* Page */
 
 #page {
-	width: 954px;
+
+
+width: 954px;
 	margin: 0 auto;
-	background: #FFFFFF url("/images/img03.jpg") repeat-y;
+	background-color:#FFF;
+	border:1px solid #666;
+	border-radius:20px;
 }
+
 
 /*#bg {
 	background: url("/images/bottom_container.jpg") no-repeat left bottom;
@@ -155,10 +167,13 @@ img.right {
 #content {
 	float: left;
 	width: 680px;
-	/*background: url("/images/top_container.jpg") no-repeat;*/
+
+/*background: url("/images/top_container.jpg") no-repeat;*/
+
 }
 
 /* Posts */
+
 
 .post {
 	width: 606px;
@@ -207,6 +222,7 @@ img.right {
 
 /* About Box */
 
+
 #about-box {
 	width: 185px;
 	height: 162px;
@@ -224,7 +240,9 @@ img.right {
 	font-size: 12px;
 }
 
+
 /* Sidebar */
+
 
 #sidebar {
 	float: right;
@@ -235,7 +253,7 @@ img.right {
 #sidebar ul {
 	width: 206px;
 	margin: 0;
-	padding: 0 0 0 30px;
+	padding: 0 0 0 5px;
 	list-style: none;
 }
 
@@ -244,7 +262,7 @@ img.right {
 
 #sidebar li ul {
 	width: auto;
-	padding: 0 15px 0 10px;
+	 
 }
 
 #sidebar li li {
@@ -262,7 +280,9 @@ img.right {
 	padding: 30px 0 40px 10px;
 	background: url("/images/img12.jpg") no-repeat left bottom;
 }
+
 /* style for year and month wise articles */
+
 
     a {
         text-decoration:none;
@@ -298,8 +318,12 @@ img.right {
         width:160px;
         padding-left:20px;
     }
+
 /* style for year and month wise articles */
+
+
 /* flas messages start */
+
 .flash_error, .flash_notice, .flash_success,.warning {
 	padding:5px 8px;margin-bottom:1em;margin-top:1em;border:1px solid #CCCCCC;
     font-size:0.9em;
@@ -329,7 +353,9 @@ img.right {
 .flash_notice a {color:#11689E;}
 .flash_success a {color:#11689E;}
 .flash_warning a {color:#11689E;}
+
 /* flas messages end */
+
 
 
 /* model validations errors*/
@@ -343,9 +369,57 @@ padding: 2px 5px;
 
   div.field_with_errors div.ui-effects-wrapper {
 display: inline-block !important;
+}
 
+
+#formbg{
+	width:450px;
+	margin-left:0px;
+	float:left;
+	background-color:#f7fcff;
+	border:1px solid #e2f0f7;
+	border-radius:20px;
+	}
+#formbg h1{
+	font-size:28px;
+	color: #4F6977;
+	margin:15px 0px 10px 15px;
+	}
+.contact_form_box {
+    background-color: #FFFFFF;
+    border: 2px solid #bee2f4;
+    margin-bottom: 10px;
+    padding: 0 12px;
+	border-radius:6px;
+    width: 310px;
+	margin-left:20px;
+	margin:20px 20px;
+}
+input.style2[type="text"] {
+    background-repeat: repeat-x;
+    border: 2px solid #bde5f8;
+    color: #969696;
+	border-radius:4px;
+	font-family:"Segoe UI";	
+    font-size: 12px;
+    height: 15px;
+    padding: 4px;
+    width: 92%;
+}
+textarea {
+    background-color: #FFFFFF;
+    border: 2px solid #bde5f8;
+	border-radius:4px;
+    color: #969696;
+	padding:4px;
+	font-family:"Segoe UI";
+    font-size: 12px;
+    height: 100px;
+    width: 92%;
+}
 
 /* Footer */
+
 
 #footer {
 	padding: 30px 0;
@@ -360,4 +434,5 @@ display: inline-block !important;
 #footer a {
 	color: #83B3CE;
 }
+
 

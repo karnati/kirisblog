@@ -8,19 +8,33 @@
   <h2>Comments</h2>
   <% @comments.each do |comment| %>
       <%= comment.name %> says:<br/>
-  <%= comment.description %><br/>
+      <%= comment.description %><br/>
   <% end %>
 
 
-  <h2>Leave a Reply</h2>
-   <%= form_for @comment, :url=> {:controller => "home", :action => "create"}, :validate => true do |f| %>
-   Name: <%= f.text_field :name %>   <br/>
-   Email: <%= f.text_field :email %> <br/>
-   Website : <%= f.text_field :website %> <br/>
-   Description : <%= f.text_field :description %> <br/>
-       <%= hidden_field_tag :title,  @article.title %>
-       <%= f.submit %>
-   <% end %>
+ 
+
+
+  <div id="formbg">
+    <h1>Leave a Reply</h1>
+    <div class="contact_form_box">
+<%= form_for @comment, :url=> {:controller => "home", :action => "create"}, :validate => true do |f| %>
+      <p style="margin:12px 0px;"><%= f.text_field :name, :class=>"style2",:value=>"Name",:onfocus=>"if(this.value=='Name') { this.value=''; this.style.color='#969696';}", :onblur=>"if(this.value=='') {this.value='Name';this.style.color='#bdb5b5';}" %> </p>
+
+<p style="margin:12px 0px;"><%= f.text_field :email, :class=>"style2",:value=>"Email",:onfocus=>"if(this.value=='Email') { this.value=''; this.style.color='#969696';}", :onblur=>"if(this.value=='') {this.value='Email';this.style.color='#bdb5b5';}" %> </p>
+
+<p style="margin:12px 0px;"><%= f.text_field :website, :class=>"style2",:value=>"Website",:onfocus=>"if(this.value=='Website') { this.value=''; this.style.color='#969696';}", :onblur=>"if(this.value=='') {this.value='Website';this.style.color='#bdb5b5';}" %> </p>
+
+<p style="margin:12px 0px;"><%= f.text_field :description, :class=>"style2",:value=>"Description",:onfocus=>"if(this.value=='Description') { this.value=''; this.style.color='#969696';}", :onblur=>"if(this.value=='') {this.value='Description';this.style.color='#bdb5b5';}" %> </p>
+<%= hidden_field_tag :title,  @article.title %>
+      <p class="button" align="right"><%= f.submit :class=>"style1", :value=>"Login" %></p>
+      
+  <% end %>
+    </div>
+
+  </div>
+
+  <div style="clear: both;">&nbsp;</div>
 
 
 </div>
