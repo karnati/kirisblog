@@ -54,6 +54,7 @@ GEM
     mime-types (1.17.2)
     mysql2 (0.2.18)
     orm_adapter (0.0.6)
+    pg (0.12.2)
     polyglot (0.3.3)
     rack (1.2.5)
     rack-mount (0.6.14)
@@ -95,5 +96,6 @@ DEPENDENCIES
   devise (= 1.4.8)
   jquery-rails (>= 1.0.12)
   mysql2 (~> 0.2.11)
+  pg
   rails (= 3.0.10)
   will_paginate (= 3.0.pre2)

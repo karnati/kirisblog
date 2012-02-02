@@ -146,16 +146,16 @@ img.right {
 	background: #FFFFFF url("/images/img03.jpg") repeat-y;
 }
 
-#bg {
+/*#bg {
 	background: url("/images/bottom_container.jpg") no-repeat left bottom;
-}
+}*/
 
 /* Content */
 
 #content {
 	float: left;
 	width: 680px;
-	background: url("/images/top_container.jpg") no-repeat;
+	/*background: url("/images/top_container.jpg") no-repeat;*/
 }
 
 /* Posts */

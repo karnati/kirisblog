@@ -11,7 +11,10 @@ gem "will_paginate", "3.0.pre2"
 gem 'client_side_validations'
 gem "devise", "1.4.8"
 gem "ckeditor", "3.6.3"
- 
+
+        group :production do
+  gem "pg"
+        end
 #gem "simple_form"
 # Use unicorn as the web server
 # gem 'unicorn'
