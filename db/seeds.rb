@@ -7,7 +7,7 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 #Article.create(:created_at => "", :title => "", :description => "")
-
+User.create(:email => "kiran@gmail.com", :password => "kiran123")
 
 Article.create(:category => "Rails", :created_at => "2012-01-12 15:51:50",:title => "Credit Cards Template", :description => "Hello, This is Credit Cards Template, This Template is provided to you for FREE, this free CSS template provided on this website are licensed under a Creative Commons Attribution 2.5 License, According to its terms, they are free to use for both commercial and noncommercial purposes provided you to link back to badtemplate.com from their websites. See our credit card deals and promotions which offer bonuses that may be awarded after only your first purchase. These awards may come in the form of cash back, air miles, merchandise or other rewards from the issuer that are in addition to the standard benefits that may be stated on your credit card application. Business credit cards can offer benefits in the form of convenience, rewards, and cash infusion. Businesses and professionals can benefit by earning unlimited cash back, rewards and frequent flyer miles.")
 

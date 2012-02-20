@@ -4,6 +4,8 @@ class CreateArticles < ActiveRecord::Migration
       t.string :category    , :null => false
       t.string :title       , :null => false
       t.text :description   , :null => false
+      t.integer :feedback_yes, :default => 0
+      t.integer :feedback_no, :default => 0
       t.timestamps
     end
   end

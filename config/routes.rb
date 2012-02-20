@@ -1,15 +1,22 @@
 Kirisblog::Application.routes.draw do
 
+
+
     devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions"}
 
 
 
   namespace :admin do
     resources :articles
+    resources :flash_games
     get "dashboard/index"
   end
 
-  resources :home
+  resources :home do
+    get "flash_games", :on => :collection
+    get "view_game" ,  :on => :member
+    get "feedback", :on => :collection
+  end
 
 
   # The priority is based upon order of creation:

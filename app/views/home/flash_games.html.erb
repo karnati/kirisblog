@@ -1,0 +1,5 @@
+<% @games.each do |game| %>
+    <div class="post" style="padding-top: 57px;">
+      <h2 class="title"><%= link_to game.name, view_game_home_path(game) %></h2>
+    </div>
+<% end %>

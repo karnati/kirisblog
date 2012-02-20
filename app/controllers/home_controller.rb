@@ -1,9 +1,10 @@
 class HomeController < ApplicationController
-  layout 'layout'
+  layout 'main_layout'
    before_filter :month_details, :recent_articles
   def index
-    @articles =Article.order("created_at DESC")
-     @comment = Comment.new
+    @articles =Article.paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
+
+    # @comment = Comment.new
   end
 
   def show
@@ -25,6 +26,24 @@ class HomeController < ApplicationController
         format.html { render :action => "show", :id => params[:title]}
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
       end
+    end
+  end
+
+def flash_games
+  @games = Admin::FlashGame.all
+end
+
+  def view_game
+    @game  =    Admin::FlashGame.find(params[:id])
+  end
+
+  def feedback
+    puts"###########################",params
+    @article = Article.find(params[:id])
+    if params[:feedback] == "yes"
+    @article.update_attribute(:feedback_yes, @article.feedback_yes + 1)
+    else
+     @article.update_attribute(:feedback_no, @article.feedback_no + 1)
     end
   end
 

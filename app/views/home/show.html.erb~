@@ -1,0 +1,79 @@
+<div class="post" style="padding-top: 57px;">
+  <h2 class="title"><%= link_to @article.title,home_path(@article.title) %></h2> <br/>
+  <h3 class="date"><%= @article.created_at.strftime("%B %d, %Y") %> </h3>
+  <div class="entry">
+    <p><%= raw(@article.description) %></p>
+  </div>
+  <br/><br/><br/><br/>
+  <div class="feedback">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Was this post usefull to you? <%= link_to "Yes", feedback_home_index_path(:feedback => "yes", :id =>@article.id), :class => "yes blue_button", :remote => true%> <%= link_to "No", feedback_home_index_path(:feedback => "no", :id =>@article.id), :class => "yes blue_button",:remote => true%>       <br/><br/><br/><br/>
+  </div>
+  <div class="after_feedback">
+    Thank you for your feedback.  <br/><br/>
+  </div>
+</div>
+<div id="formbga">
+  <div id="formbgb">
+    <h2>Leave a Reply</h2>
+    <%= form_for @comment, :url=> {:controller => "home", :action => "create"}, :validate => true do |f| %>
+
+        <p style="margin:12px 0px;"><b> Name</b><br/><%= f.text_field :name, :class=>"text" %> </p>
+
+        <p style="margin:12px 0px;"><b> Email </b> (never published)<br/><%= f.text_field :email, :class=>"text" %> </p>
+
+        <p style="margin:12px 0px;"><b> Website</b> (optional)<br/><%= f.text_field :website, :class=>"text" %> </p>
+
+        <p style="margin:12px 0px;"><b> Description</b><br/><%= f.text_area :description, :class=>"text", :rows => 4, :cols =>34 %> </p>
+        <%= hidden_field_tag :title,  @article.title %>
+        <p class="button" align="right"><%= f.submit :class=>"blue_button", :value=>"Submit" %></p>
+    <% end %>
+  </div>
+</div>
+<div style="margin: 0px 0px 0px 60px; width: 575px;">
+<% unless @comments.blank? %>
+    <div style="clear: both;">&nbsp;</div>
+    <h2>Comments</h2>   <br/>
+
+    <ol class="commentList">
+      <% @comments.each do |comment| %>
+          <li>
+            <div class="commentLeft">
+              <div class="gravatarImage">
+                <img height="50" width="50" src="http://www.gravatar.com/avatar/fcda9a8e93e866fc99179d2eacc26a25" alt="Fcda9a8e93e866fc99179d2eacc26a25">
+              </div>
+            </div>
+            <div class="commentRight">
+
+              <p class="commentName"> <%= comment.name %> says:</p>
+              <p class="commentCreated_at"> 1:04 AM on Thursday, October 14th, 2010</p>
+              <div class="commentContent">
+                <p><%= comment.description %></p>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+          </li>     <br/>
+      <% end %>
+    </ol>
+
+
+<% end %>
+</div>
+<script type="text/javascript">
+
+
+    $(document).ready(function(){
+
+
+        $(".after_feedback").hide();
+
+        $('.feedback').click(function(){
+            $(".feedback").hide();
+            $(".after_feedback").show();
+        });
+
+    });
+
+</script>
+
+

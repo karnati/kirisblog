@@ -1,20 +1,37 @@
- 
+
+
 <% @articles.each do |article| %>
-<div class="post" style="padding-top: 57px;">
-  <h3 class="date"><%= article.created_at.strftime("%B %d, %Y") %> </h3>
-  <h2 class="title"><%= article.title %></h2>
+    <div class="post" style="padding-top: 57px;">
+      <h3 class="date"><%= article.created_at.strftime("%B %d, %Y") %> </h3>
+      <h2 class="title"><%= link_to article.title,home_path(article.title) %></h2>
 
-  <div class="entry">
-    <p><%= article.description %></p>
-  </div>
-  <p class="meta">
-    <%= link_to "Read More ...",home_path(article.title),:class => "more" %> <b>|</b>
-    <a href="#" class="comments"> View Comments (<%= article.comments.count%>)</a>
-     <%= link_to "Post a Comment", "#" , :title => "Post a Comment" %>
+      <div class="entry">
+        <p><%= raw(truncate(article.description, :length => 200)) %></p> <br/> <br/>
+      </div>
+      <p class="meta">
+        <%= link_to "Read More ...",home_path(article.title),:class => "blue_button" %>  &nbsp; &nbsp; &nbsp; &nbsp;
+        <%= link_to "View Comments ( #{article.comments.count})",home_path(article.title),:class => "blue_button" %>
 
-  </p>
-</div>
 
- <% end %>
+      </p>
+      <div style="display: none;">
+        <div id="inline1" style="width:400px;height:460px;overflow:auto;">
+          <div id="formbg">
+            <h1>Leave a Reply</h1>
+            <div class="contact_form_box" style="width:350px;">
+              <%= article.comments.count %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+     <div style="width:auto; clear:both; margin:27px 23px 19px 228px;   color:#0066FF;">
+      <h4  ><%= will_paginate @articles%></h4>
+    </div>
 
- 
+
+
+
+
+

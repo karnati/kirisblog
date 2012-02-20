@@ -11,12 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120127130604) do
+ActiveRecord::Schema.define(:version => 20120213160622) do
+
+  create_table "admin_flash_games", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "articles", :force => true do |t|
-    t.string   "category",    :null => false
-    t.string   "title",       :null => false
-    t.text     "description", :null => false
+    t.string   "category",                    :null => false
+    t.string   "title",                       :null => false
+    t.text     "description",                 :null => false
+    t.integer  "feedback_yes", :default => 0
+    t.integer  "feedback_no",  :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

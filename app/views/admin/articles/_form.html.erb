@@ -1,3 +1,4 @@
+<%= javascript_include_tag "ckeditor/ckeditor" %>
 <%= form_for([:admin, @article]) do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -17,7 +18,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.cktext_area :description,  :width => 800, :height => 400 %>
   </div>
   <div class="actions">
     <%= f.submit %>
