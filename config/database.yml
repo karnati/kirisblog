@@ -12,8 +12,8 @@ development:
   reconnect: false
   database: kirisblog_dev
   pool: 5
-  username: root
-  password: root
+  username: kirisblog_dev
+  password: kirisblog_dev
   socket: /var/run/mysqld/mysqld.sock
 
 
@@ -23,7 +23,7 @@ production:
   reconnect: false
   database: kirisblog_production
   pool: 5
-  username: root
-  password: root
+  username: kirisblog_dev
+  password: kirisblog_dev
   socket: /var/run/mysqld/mysqld.sock
  
