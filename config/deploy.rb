@@ -1,4 +1,4 @@
-#require 'capistrano'
+require 'capistrano'
 require 'capistrano-vexxhost'
  require 'bundler/capistrano'
 =begin
@@ -13,19 +13,16 @@ set :rake, "rake"
 
 
 set :application, "kirisblog"
-set :domain, "www.kiris.in"
+
 set :user, "kiriblog"
+set :password, "kiran@12345"
+set :scm, 'git'
+set :scm_username, 'karnati'
+set :scm_password, 'kumar123'
+set :repository, 'git@github.com:karnati/kirisblog.git'
+set :domain, "www.kiris.in"
 set :port, 3010
-set :repository, "/usr/home/#{user}/#{application}"
-set :scm, :none
-set :runner, user
-set :use_sudo, false
-set :deploy_via, :copy
-set :deploy_to, "/usr/local/www/#{user}/#{application}"
-set :group_writable, false
-role :app, domain
-role :web, domain
-role :db, domain, :primary => true
+
 
 =begin
 # Account Settings
