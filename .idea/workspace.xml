@@ -28,7 +28,7 @@
       <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="590" selection-end="590" vertical-scroll-proportion="0.5691057">
+            <state line="29" column="1" selection-start="553" selection-end="553" vertical-scroll-proportion="0.58943087">
               <folding />
             </state>
           </provider>
@@ -295,7 +295,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="409" y="386" width="1430" height="904" extended-state="0" />
+    <frame x="413" y="189" width="1430" height="904" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -443,7 +443,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="590" selection-end="590" vertical-scroll-proportion="0.5691057">
+        <state line="29" column="1" selection-start="553" selection-end="553" vertical-scroll-proportion="0.58943087">
           <folding />
         </state>
       </provider>

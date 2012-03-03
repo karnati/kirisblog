@@ -15,7 +15,7 @@ development:
   username: kiris_dev
   password: kiris_dev
   host: localhost
-  #socket: /var/run/mysqld/mysqld.sock
+
 
 
 production:
@@ -27,5 +27,5 @@ production:
   username: kiris_dev
   password: kiris_dev
   host: localhost
-  #socket: /var/run/mysqld/mysqld.sock
+
  
