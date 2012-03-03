@@ -10,11 +10,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kiriblog_dev
+  database: kiris_blog_dev
   pool: 5
-  username: kiriblog_dev
-  password: kiran@12345
-  host: localhost
+  username: kiris_dev
+  password: kiris_dev
   socket: /var/run/mysqld/mysqld.sock
 
 
@@ -22,10 +21,9 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kirisblog_production
+  database: kiris_blog_production
   pool: 5
-  username: kiriblog_dev
-  password: kiran@12345
-  host: localhost
+  username: kiris_dev
+  password: kiris_dev
   socket: /var/run/mysqld/mysqld.sock
  
