@@ -14,7 +14,7 @@ development:
   pool: 5
   username: kiris_dev
   password: kiris_dev
-  host: localhost
+  host: mysql.alwaysdata.com
 
 
 
@@ -26,6 +26,6 @@ production:
   pool: 5
   username: kiris_dev
   password: kiris_dev
-  host: localhost
+  host: mysql.alwaysdata.com
 
  
