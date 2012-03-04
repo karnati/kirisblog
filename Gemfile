@@ -11,8 +11,9 @@ gem "will_paginate", "3.0.pre2"
 #gem 'client_side_validations'
 
 #gem "ckeditor", "3.6.3"
-#gem 'paperclip','2.3.11', :require => 'paperclip'
+gem 'paperclip','2.3.11', :require => 'paperclip'
 #gem "fcgi"
+gem "json"
 gem 'rake', '0.9.2'
 gem 'rack', '1.2.3'
 gem 'tzinfo', '0.3.29'
