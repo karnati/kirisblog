@@ -12,7 +12,7 @@ gem 'client_side_validations'
 gem "devise", "1.4.8"
 gem "ckeditor", "3.6.3"
 gem 'paperclip','2.3.11', :require => 'paperclip'
-
+gem "fcgi"
   #gem "pg"
 
 #gem "simple_form"
