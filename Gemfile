@@ -13,6 +13,7 @@ gem "devise", "1.4.8"
 gem "ckeditor", "3.6.3"
 gem 'paperclip','2.3.11', :require => 'paperclip'
 gem "fcgi"
+gem 'rake', '0.9.2'
   #gem "pg"
 
 #gem "simple_form"

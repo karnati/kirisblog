@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f7e45-1c3b-4bb5-a138-2f0846749286" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="kirisblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,19 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="105" selection-end="105" vertical-scroll-proportion="0.040595397">
+            <state line="5" column="76" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.2841678">
               <folding />
             </state>
           </provider>
@@ -94,8 +95,8 @@
         <option value="$PROJECT_DIR$/Capfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -441,13 +442,6 @@
         <state line="14" column="45" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="28" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
@@ -457,7 +451,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="105" selection-end="105" vertical-scroll-proportion="0.040595397">
+        <state line="5" column="76" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.2841678">
           <folding />
         </state>
       </provider>
