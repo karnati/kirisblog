@@ -14,6 +14,7 @@ gem "ckeditor", "3.6.3"
 gem 'paperclip','2.3.11', :require => 'paperclip'
 gem "fcgi"
 gem 'rake', '0.9.2'
+gem 'rack', '1.2.3'
   #gem "pg"
 
 #gem "simple_form"
