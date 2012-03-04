@@ -37,6 +37,7 @@
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.0.9, ruby-1.9.2-p-1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.2.19, ruby-1.9.2-p-1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.0.9, ruby-1.9.2-p-1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="paperclip (v2.3.11, ruby-1.9.2-p-1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.2.18, ruby-1.9.2-p-1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.2.3, ruby-1.9.2-p-1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.14.6, ruby-1.9.2-p-1) [gem]" level="application" />
