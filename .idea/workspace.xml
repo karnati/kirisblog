@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016f7e45-1c3b-4bb5-a138-2f0846749286" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/kirisblog.iml" afterPath="$PROJECT_DIR$/.idea/kirisblog.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="kirisblog.iws" />
@@ -55,7 +56,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.20838971">
+            <state line="6" column="21" selection-start="160" selection-end="160" vertical-scroll-proportion="0.046008117">
               <folding />
             </state>
           </provider>
@@ -482,7 +483,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.20838971">
+        <state line="6" column="21" selection-start="160" selection-end="160" vertical-scroll-proportion="0.046008117">
           <folding />
         </state>
       </provider>

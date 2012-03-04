@@ -4,12 +4,12 @@ gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem "devise", "1.4.8"
 gem 'mysql2', '~> 0.2.11'
 gem 'jquery-rails', '>= 1.0.12'
 gem "will_paginate", "3.0.pre2"
 gem 'client_side_validations'
-gem "devise", "1.4.8"
+
 gem "ckeditor", "3.6.3"
 gem 'paperclip','2.3.11', :require => 'paperclip'
 gem "fcgi"
