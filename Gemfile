@@ -16,6 +16,7 @@ gem "fcgi"
 gem 'rake', '0.9.2'
 gem 'rack', '1.2.3'
 gem 'tzinfo', '0.3.29'
+gem 'mime-types', '1.16'
   #gem "pg"
 
 #gem "simple_form"
