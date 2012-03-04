@@ -19,6 +19,8 @@ gem 'rack', '1.2.3'
 gem 'tzinfo', '0.3.29'
 gem 'mime-types', '1.16'
 gem 'polyglot', '0.3.2'
+gem "bcrypt-ruby", :require => "bcrypt"
+
 #gem 'bcrypt-ruby','3.0.1'
 #gem "orm_adapter",'0.0.6'
   #gem "pg"
