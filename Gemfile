@@ -4,7 +4,7 @@ gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "devise", "1.4.8"
+#gem "devise", "1.4.8"
 gem 'mysql2', '~> 0.2.11'
 gem 'jquery-rails', '>= 1.0.12'
 gem "will_paginate", "3.0.pre2"
