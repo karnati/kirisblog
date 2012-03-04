@@ -12,6 +12,7 @@ public/system/*
 db/schema.rb
 
 .idea/*
-
+public/.htaccess
+public/dispatch.fcgi
 rails_best_practices_output.html
 public/ckeditor_assets/*
