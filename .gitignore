@@ -6,15 +6,15 @@ tmp/
 
 .project
 config/database.yml
-public/*
+public/
 public/system/*
 
 db/schema.rb
 
-.idea/*
+.idea/
 public/.htaccess
 public/dispatch.fcgi
 rails_best_practices_output.html
 public/ckeditor_assets/*
 config/database.yml
-db/*
+db/
