@@ -12,20 +12,11 @@ development:
   reconnect: false
   database: kiris_blog_dev
   pool: 5
-  username: kiris_dev
-  password: kiris_dev
-  host: mysql.alwaysdata.com
+  username: root
+  password: root
 
 
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: kiris_blog_production
-  pool: 5
-  username: kiris_dev
-  password: kiris_dev
-  host: mysql.alwaysdata.com
+
 
  

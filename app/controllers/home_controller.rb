@@ -38,7 +38,6 @@ end
   end
 
   def feedback
-    puts"###########################",params
     @article = Article.find(params[:id])
     if params[:feedback] == "yes"
     @article.update_attribute(:feedback_yes, @article.feedback_yes + 1)

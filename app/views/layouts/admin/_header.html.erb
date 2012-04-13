@@ -10,7 +10,7 @@
             <b>Hospital</b>  : <%#= current_administrator.hospital_id.blank? ? "Anil Diabetes Centre" : hospital_name(current_administrator) %><br /><br />
             <b>Location</b> : <%#= current_administrator.location_id.blank? ? "- - - -" : location_name(current_administrator) %>
         </div>
-        <h3><%= link_to image_tag("/images/hms_logo.png", :border => 0, :height=>"88px" ,:width=>"200px",:title => 'Hospital Management System'), root_path %></h3><!--root_path -->
+        <h3><%= link_to image_tag("/images/hms_logo.png", :border => 0,:title => 'Hospital Management System'), root_path %></h3><!--root_path -->
     </div>
 
 <% end %>

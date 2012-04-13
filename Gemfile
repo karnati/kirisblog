@@ -12,16 +12,9 @@ gem 'client_side_validations'
 
 gem "ckeditor", "3.6.3"
 gem 'paperclip','2.3.11', :require => 'paperclip'
-gem "fcgi"
-gem "json"
-gem 'rake', '0.9.2'
-gem 'rack', '1.2.3'
-gem 'tzinfo', '0.3.29'
-gem 'mime-types', '1.16'
-gem 'polyglot', '0.3.2'
-gem "bcrypt-ruby", :require => "bcrypt"
 
-#gem 'bcrypt-ruby','3.0.1'
+
+gem 'bcrypt-ruby','3.0.1'
 #gem "orm_adapter",'0.0.6'
   #gem "pg"
 
@@ -29,9 +22,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
-# gem 'capistrano-vexxhost'
+
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
