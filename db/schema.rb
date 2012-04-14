@@ -20,21 +20,23 @@ ActiveRecord::Schema.define(:version => 20120213160622) do
   end
 
   create_table "articles", :force => true do |t|
-    t.string   "category",                    :null => false
-    t.string   "title",                       :null => false
-    t.text     "description",                 :null => false
+    t.string   "category",                       :null => false
+    t.string   "title",                          :null => false
+    t.text     "description",                    :null => false
     t.integer  "feedback_yes", :default => 0
     t.integer  "feedback_no",  :default => 0
+    t.boolean  "status",       :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "comments", :force => true do |t|
-    t.integer  "article_id",  :null => false
-    t.string   "name",        :null => false
-    t.string   "email",       :null => false
+    t.integer  "article_id",                    :null => false
+    t.string   "name",                          :null => false
+    t.string   "email",                         :null => false
     t.string   "website"
-    t.string   "description", :null => false
+    t.string   "description",                   :null => false
+    t.boolean  "status",      :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,8 +44,12 @@ ActiveRecord::Schema.define(:version => 20120213160622) do
   add_index "comments", ["article_id"], :name => "index_comments_on_article_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string   "email",                                 :default => "",   :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",   :null => false
+    t.string   "first_name",                                              :null => false
+    t.string   "last_name"
+    t.string   "username",                                                :null => false
+    t.boolean  "status",                                :default => true
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
