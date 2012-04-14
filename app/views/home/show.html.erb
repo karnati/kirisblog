@@ -17,15 +17,15 @@
     <h2>Leave a Reply</h2>
     <%= form_for @comment, :url=> {:controller => "home", :action => "create"}, :validate => true do |f| %>
 
-        <p style="margin:12px 0px;"><b> Name</b><br/><%= f.text_field :name, :class=>"text" %> </p>
+        <p style="margin:12px 0px; width: 540px;"><b> Name</b><br/><%= f.text_field :name, :class=>"text" %> </p>
 
-        <p style="margin:12px 0px;"><b> Email </b> (never published)<br/><%= f.text_field :email, :class=>"text" %> </p>
+        <p style="margin:12px 0px; width: 540px;"><b> Email </b> (never published)<br/><%= f.text_field :email, :class=>"text" %> </p>
 
-        <p style="margin:12px 0px;"><b> Website</b> (optional)<br/><%= f.text_field :website, :class=>"text" %> </p>
+        <p style="margin:12px 0px; width: 540px;"><b> Website</b> (optional)<br/><%= f.text_field :website, :class=>"text" %> </p>
 
-        <p style="margin:12px 0px;"><b> Description</b><br/><%= f.text_area :description, :class=>"text", :rows => 4, :cols =>34 %> </p>
+        <p style="margin:12px 0px; width: 540px;"><b> Description</b><br/><%= f.text_area :description, :class=>"text", :rows => 4, :cols =>31 %> </p>
         <%= hidden_field_tag :title,  @article.title %>
-        <p class="button" align="right"><%= f.submit :class=>"blue_button", :value=>"Submit" %></p>
+        <p class="button" style="margin: 23px 2px 17px 95px;"><%= f.submit :class=>"blue_button", :value=>"Submit" %></p>
     <% end %>
   </div>
 </div>
@@ -39,13 +39,13 @@
           <li>
             <div class="commentLeft">
               <div class="gravatarImage">
-                <img height="50" width="50" src="http://www.gravatar.com/avatar/fcda9a8e93e866fc99179d2eacc26a25" alt="Fcda9a8e93e866fc99179d2eacc26a25">
+                <img height="50" width="50" src="http://www.gravatar.com/avatar/fcda9a8e93e866fc99179d2eacc26a25" alt="">
               </div>
             </div>
             <div class="commentRight">
 
               <p class="commentName"> <%= comment.name %> says:</p>
-              <p class="commentCreated_at"> 1:04 AM on Thursday, October 14th, 2010</p>
+              <p class="commentCreated_at">  <%= comment.created_at.strftime("on %A, %B %dth, %Y ") %> </p>
               <div class="commentContent">
                 <p><%= comment.description %></p>
               </div>
