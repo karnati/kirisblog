@@ -6,13 +6,13 @@
   </div>
   <br/><br/><br/><br/>
   <div class="feedback">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Was this post usefull to you? <%= link_to "Yes", feedback_home_index_path(:feedback => "yes", :id =>@article.id), :class => "yes blue_button", :remote => true%> <%= link_to "No", feedback_home_index_path(:feedback => "no", :id =>@article.id), :class => "yes blue_button",:remote => true%>       <br/><br/><br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Was this post usefull to you? <%= link_to "Yes", feedback_home_index_path(:feedback => "yes", :id =>@article.id), :class => "yes blue_button", :remote => true, :id => "feedback_yes"%> <%= link_to "No", feedback_home_index_path(:feedback => "no", :id =>@article.id), :class => "yes blue_button",:remote => true, :id => "feedback_no"%>       <br/><br/><br/><br/>
   </div>
   <div class="after_feedback">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you for your feedback.  <br/><br/><br/><br/>
   </div>
 
-  <div class="like_count" style="margin: -64px 1px 52px 450px;">
+  <div id="like_count" style="margin: -64px 1px 52px 450px;">
      Yes <%= @article.feedback_yes %>  No <%= @article.feedback_no %>
   </div>
 </div>
@@ -64,20 +64,16 @@
 <% end %>
 </div>
 <script type="text/javascript">
-
-
     $(document).ready(function(){
-
-
         $(".after_feedback").hide();
-
         $('.feedback').click(function(){
             $(".feedback").hide();
             $(".after_feedback").show();
         });
-
     });
-
 </script>
+
+
+
 
 

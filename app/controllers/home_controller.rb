@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   layout 'main_layout'
-   before_filter :month_details, :recent_articles
+  before_filter :month_details, :recent_articles
   def index
     @articles =Article.where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
 
@@ -13,11 +13,11 @@ class HomeController < ApplicationController
     @comment = Comment.new
   end
 
- def create
+  def create
     @comment = Comment.new(params[:comment])
-     @article = Article.find_by_title(params[:title])
+    @article = Article.find_by_title(params[:title])
     @comments = Comment.where(:article_id => @article.id)
-   @comment.article_id = @article.id
+    @comment.article_id = @article.id
     respond_to do |format|
       if @comment.save
         format.html { redirect_to(home_path(params[:title]), :notice => 'Comment posted successfully.') }
@@ -28,6 +28,9 @@ class HomeController < ApplicationController
       end
     end
   end
+
+
+
 
 =begin
 def flash_games
@@ -40,12 +43,16 @@ end
 =end
 
   def feedback
+
     @article = Article.find(params[:id])
     if params[:feedback] == "yes"
-    @article.update_attribute(:feedback_yes, @article.feedback_yes + 1)
+      @article.update_attribute(:feedback_yes, @article.feedback_yes + 1)
     else
-     @article.update_attribute(:feedback_no, @article.feedback_no + 1)
+      @article.update_attribute(:feedback_no, @article.feedback_no + 1)
     end
+    respond_to do |format|
+        format.js
+      end
   end
 
 
