@@ -13,13 +13,13 @@ Kirisblog::Application.routes.draw do
       get   "manage_article_status",                                   :on => :member
       put   "manage_article_status",                                   :on => :member
     end
-    resources :flash_games
+   # resources :flash_games
     get "dashboard/index"
   end
 
   resources :home do
-    get "flash_games", :on => :collection
-    get "view_game" ,  :on => :member
+  #  get "flash_games", :on => :collection
+  #  get "view_game" ,  :on => :member
     get "feedback", :on => :collection
   end
 

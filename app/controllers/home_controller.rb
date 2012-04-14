@@ -29,6 +29,7 @@ class HomeController < ApplicationController
     end
   end
 
+=begin
 def flash_games
   @games = Admin::FlashGame.all
 end
@@ -36,6 +37,7 @@ end
   def view_game
     @game  =    Admin::FlashGame.find(params[:id])
   end
+=end
 
   def feedback
     @article = Article.find(params[:id])
