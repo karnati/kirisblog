@@ -21,11 +21,11 @@ class ApplicationController < ActionController::Base
 
   def month_details
     # @articles_by_month = Article.find(:all).group_by { |post| post.created_at.strftime("%B") }
-     @articles_by_year  = Article.find(:all).group_by { |post| post.created_at.strftime("%Y") }
+     @articles_by_year  = Article.where(:status => true).group_by { |post| post.created_at.strftime("%Y") }
   end
 
   def recent_articles
-    @recent_articles = Article.select("id,title").limit(5).order("created_at DESC").all
+    @recent_articles = Article.select("id,title").where(:status => true).limit(5).order("created_at DESC").all
   end
 
 end
