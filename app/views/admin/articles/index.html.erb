@@ -14,8 +14,7 @@
         <th>Title</th>
         <th>Description</th>
         <th></th>
-        <th></th>
-        <th></th>
+
       </tr>
       </thead>
       <tbody>
@@ -24,9 +23,9 @@
           <tr class="<%= cycle( 'even','odd') %>">
             <td><%= truncate(article.title, :length =>30) %></td>
             <td><%=raw(truncate(article.description, :length =>50)) %></td>
-            <td><%= link_to 'Show', admin_article_path(article) %></td>
-            <td><%= link_to 'Edit', edit_admin_article_path(article) %></td>
-            <td><%= link_to 'Destroy', admin_article_path(article), :confirm => 'Are you sure?', :method => :delete %></td>
+            <td><%= link_to 'Show', admin_article_path(article) %> | <%= link_to 'Edit', edit_admin_article_path(article) %> |
+              <%= link_to 'Destroy', admin_article_path(article), :confirm => 'Are you sure?', :method => :delete %> |
+             </span> <i id = "status_<%= article.id %>">   <%= link_to article.status? ? "Active" : "Inactive",manage_article_status_admin_article_path(:id => article.id)  %> </i></td>
           </tr>
       <% end %>
 

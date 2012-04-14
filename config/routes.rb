@@ -7,7 +7,12 @@ Kirisblog::Application.routes.draw do
 
 
   namespace :admin do
-    resources :articles
+    resources :articles do
+      get   "manage_comment_status",                                   :on => :member
+      put   "manage_comment_status",                                   :on => :member
+      get   "manage_article_status",                                   :on => :member
+      put   "manage_article_status",                                   :on => :member
+    end
     resources :flash_games
     get "dashboard/index"
   end

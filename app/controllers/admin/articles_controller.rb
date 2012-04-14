@@ -71,6 +71,20 @@ class Admin::ArticlesController < ApplicationController
     end
   end
 
+  def manage_comment_status
+    comment = Comment.find(params[:id])
+     comment.toggle! :status
+    redirect_to :back
+    flash[:success] = "Status changed Succesfully"
+  end
+
+  def manage_article_status
+    article = Article.find(params[:id])
+     article.toggle! :status
+    redirect_to :back
+    flash[:success] = "Status changed Succesfully"
+  end
+
   # DELETE /admin/articles/1
   # DELETE /admin/articles/1.xml
   def destroy
