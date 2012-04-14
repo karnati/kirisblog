@@ -93,7 +93,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby (= 3.0.1)
   ckeditor (= 3.6.3)
   client_side_validations
   devise (= 1.4.8)

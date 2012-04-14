@@ -14,7 +14,7 @@ gem "ckeditor", "3.6.3"
 gem 'paperclip','2.3.11', :require => 'paperclip'
 
 
-gem 'bcrypt-ruby','3.0.1'
+#gem 'bcrypt-ruby','3.0.1'
 #gem "orm_adapter",'0.0.6'
   #gem "pg"
 
