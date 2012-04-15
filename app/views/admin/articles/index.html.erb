@@ -1,42 +1,4 @@
-
-<div class="list" id="template_category_list">
-  <div class="list" id="admintable">
-    <table width="100%">
-      <tbody><tr><td align="left"><h3 align="left">Listing Articles</h3></td>
-        <td align="right"><b><i>per page</i></b><%= per_page%> | <%= page_entries_info @articles %></td>
-      </tr>
-      </tbody>
-    </table>
-
-    <table cellspacing="1" class="tablesorter">
-      <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th></th>
-
-      </tr>
-      </thead>
-      <tbody>
-
-      <% @articles.each do |article| %>
-          <tr class="<%= cycle( 'even','odd') %>">
-            <td><%= truncate(article.title, :length =>30) %></td>
-            <td><%=raw(truncate(article.description, :length =>50)) %></td>
-            <td><%= link_to 'Show', admin_article_path(article) %> | <%= link_to 'Edit', edit_admin_article_path(article) %> |
-              <%= link_to 'Destroy', admin_article_path(article), :confirm => 'Are you sure?', :method => :delete %> |
-             </span> <i id = "status_<%= article.id %>">   <%= link_to article.status? ? "Active" : "Inactive",manage_article_status_admin_article_path(:id => article.id)  %> </i></td>
-          </tr>
-      <% end %>
-
-      </tbody>
-    </table>
-    <div style="width:auto; clear:both; margin:10px 0px 10px 0px; float:right; color:#0066FF;">
-      <h4 align="right"><%= will_paginate @articles%></h4>
-    </div>
-
-  </div>
-  </div>
+<%= render "index" %>
 
 
 

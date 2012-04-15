@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
+<br />
+<div class="title" style="border:none;"><span>Admin Details</span></div>
+<table cellspacing="1" class="tablesorter" style="width:100%;">
 
-<p>
-  <b>Description:</b>
-  <%=raw(@article.description) %>
-</p>
+  <tr><td width="10%"><b>Title</b></td>
+    <td ><%= @article.title %></td></tr>
+  <tr><td width="10%"><b>Description</b></td>
+    <td ><%=raw(@article.description)%></td></tr>
+
+  <tr><td width="10%"><b>Created at</b></td>
+    <td ><%= distance_of_time_in_words_to_now(@article.created_at, include_seconds = true) %> ago</td></tr>
+  <tr><td width="10%"><b>Updated at</b></td>
+    <td ><%= distance_of_time_in_words_to_now(@article.updated_at, include_seconds = true) %> ago</td></tr>
+</table>
 
 
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |

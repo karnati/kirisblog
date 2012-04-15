@@ -12,6 +12,7 @@ Kirisblog::Application.routes.draw do
       put   "manage_comment_status",                                   :on => :member
       get   "manage_article_status",                                   :on => :member
       put   "manage_article_status",                                   :on => :member
+      get "search",                                                    :on => :collection
     end
    # resources :flash_games
     get "dashboard/index"

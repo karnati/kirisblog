@@ -24,18 +24,7 @@
   <tr>
     <!-- Start SIDE BAR -->
     <td id="sidebar" class="sidebar" valign="top">
-      <div class="filters">
-        <!--  Search bar -->
-        <h4>Search Articles</h4><div style="margin: 0px 0px 6px;">
-        <%#= form_tag(search_cities_path, :method=>'get') do %>
-            <table>
-              <tr>
-                <td><%= text_field_tag :search%></td>
-                <td><%= submit_tag "Search"%> </td>
-              </tr>
-            </table>
-        <%# end %>
-      </div>
+      <%= render "sidebar_top" %>
 
         <!--  Ajax Radio buttons approved or suspended (Side bar) -->
         <div id="snapshot">
@@ -45,15 +34,7 @@
 
       </div>
       <div class="panel">
-        <div class="caption">Recent Articles        </div>
-        <div id="recently">
-          <%# @recent.each do |admin| %>
-              <li id="recent_admin_<%#= admin.id %>" class="">
-                <dt><%#= link_to admin.name,  city_path(admin) %></dt>
-                <tt><br /></tt>
-              </li>
-          <%# end %>
-        </div>
+        <%= render "sidebar_recent" %>
       </div>
 
 
