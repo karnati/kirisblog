@@ -5,7 +5,7 @@
             <b><%= Date.today.strftime("%d - %h - %Y ( %A )") %></b> <span id="welcome_username"></span>
             <span>&nbsp;&nbsp;</span>           
             |<%= link_to 'Profile'  %>  <!-- logged_in_user_profile_path-->
-            |<%= link_to 'Logout'  %>  <!-- destroy_user_session_path -->
+            |<%= link_to 'Logout', destroy_user_session_path, :method => :delete  %>  <!-- destroy_user_session_path -->
             <br /><br />
         </div>
         <h3><%= link_to image_tag("/images/Logo_main.png", :border => 0, :height=>"100px" ,:width=>"200px",:title => 'Kiris Blog'), root_path %></h3><!--root_path -->
