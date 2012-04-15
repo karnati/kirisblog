@@ -1,9 +1,11 @@
-<div class="caption">Recent Articles        </div>
-<div id="recently">
-  <% @recent.each do |article| %>
-  <li id="recent_article_<%= article.id %>" class="">
-    <dt><%= link_to truncate(article.title, :length =>30),  admin_article_path(article) %></dt>
-    <tt><br /></tt>
-  </li>
-  <% end %>
+<div class="panel">
+  <div class="caption">Recent Articles        </div>
+  <div id="recently">
+    <% @recent.each do |article| %>
+        <li id="recent_article_<%= article.id %>" class="">
+          <dt><%= link_to truncate(article.title, :length =>30),  admin_article_path(article) %></dt>
+          <tt><br /></tt>
+        </li>
+    <% end %>
+  </div>
 </div>

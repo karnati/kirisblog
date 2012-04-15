@@ -12,6 +12,9 @@
       <tr>
         <th>Title</th>
         <th>Description</th>
+        <th>Comments</th>
+        <th>Likes</th>
+        <th>Unlikes</th>
         <th></th>
 
       </tr>
@@ -22,6 +25,9 @@
           <tr class="<%= cycle( 'even','odd') %>">
             <td><%= highlight(truncate(article.title, :length =>75), params[:search]) %></td>
             <td><%=highlight(raw(truncate(article.description, :length =>100)), params[:search]) %></td>
+            <td><center><%= article.comments.count %></center></td>
+            <td><center><%= article.feedback_yes %></center></td>
+            <td><center><%= article.feedback_no %></center></td>
             <td><%= link_to 'Show', admin_article_path(article) %> | <%= link_to 'Edit', edit_admin_article_path(article) %> |
 
               </span> <i id = "status_<%= article.id %>">   <%= link_to article.status? ? "Active" : "Inactive",manage_article_status_admin_article_path(:id => article.id)  %> </i></td>

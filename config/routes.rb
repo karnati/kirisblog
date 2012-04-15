@@ -2,6 +2,10 @@ Kirisblog::Application.routes.draw do
 
 
 
+  get "users/index"
+
+  get "users/show"
+
     devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions"}
 
 
@@ -14,13 +18,16 @@ Kirisblog::Application.routes.draw do
       put   "manage_article_status",                                   :on => :member
       get "search",                                                    :on => :collection
     end
-   # resources :flash_games
+
+    resources :users ,:only=>[:index, :show]  do
+      get   "manage_status",                                   :on => :member
+      put   "manage_status",                                   :on => :member
+      get "search",                                                    :on => :collection
+    end
     get "dashboard/index"
   end
 
   resources :home do
-  #  get "flash_games", :on => :collection
-  #  get "view_game" ,  :on => :member
     get "feedback", :on => :collection
   end
 

@@ -1,0 +1,11 @@
+<div class="panel">
+  <div class="caption">Recent Users        </div>
+  <div id="recently">
+    <% @recent.each do |user| %>
+        <li id="recent_article_<%= user.id %>" class="">
+          <dt><%= link_to truncate(user.email, :length =>30),  admin_user_path(user) %></dt>
+          <tt><br /></tt>
+        </li>
+    <% end %>
+  </div>
+</div>

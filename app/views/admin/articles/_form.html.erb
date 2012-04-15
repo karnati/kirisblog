@@ -1,4 +1,6 @@
 <%= javascript_include_tag "ckeditor/ckeditor" %>
+<p>
+  <table cellspacing="1" class="tablesorter"   style="width:50%;">
 <%= form_for([:admin, @article]) do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -13,14 +15,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <tr>
+      <td><%= f.label :title %></td>
+      <td><%= f.text_area :title , :cols => 108, :rows=> 2%></td>
+    </tr>
+
+
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.cktext_area :description,  :width => 800, :height => 400 %>
+    <tr>
+      <td><%= f.label :description %></td>
+      <td><%= f.cktext_area :description,  :width => 800, :height => 400 %></td>
+    </tr>
+
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <tr>
+      <td colspan="2"><%= f.submit %></td>
+    </tr>
+
   </div>
+
 <% end %>
+      </table>

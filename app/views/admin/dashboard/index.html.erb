@@ -1,2 +1,66 @@
-<h1>Admin::Dashboard#index</h1>
-<p>Find me in app/views/admin/dashboard/index.html.erb</p>
+
+  <div class="list" id="admintable">
+    <table width="40%">
+      <tbody><tr><td align="left"><h3 align="left">Highest Feedbacks</h3></td>
+
+      </tr>
+      </tbody>
+    </table>
+    <table cellspacing="1" class="tablesorter">
+      <thead>
+      <tr>
+
+        <th width="8%">Likes</th>
+        <th width="8%"> Unlikes</th>
+        <th>Article</th>
+      </tr>
+      </thead>
+      <tbody>
+      <%  @article_feedbacks.each do |article| %>
+          <tr class="<%= cycle( 'even','odd') %>">
+
+            <td><%= article.feedback_yes %></td>
+            <td><%= article.feedback_no %></td>
+            <td><%= article.title %></td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+
+<div class="list" id="template_category_list">
+  <div class="list" id="admintable">
+    <table width="40%">
+      <tbody><tr><td align="left"><h3 align="left">Recent Comments</h3></td>
+
+      </tr>
+      </tbody>
+    </table>
+    <table cellspacing="1" class="tablesorter">
+      <thead>
+      <tr>
+        <th>Article</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Comment</th>
+        <th>Created at</th>
+      </tr>
+      </thead>
+      <tbody>
+      <%  @comments.each do |comment| %>
+          <tr class="<%= cycle( 'even','odd') %>">
+            <td><%= truncate(comment.article.title, :length => 25) %></td>
+            <td><%= comment.name %></td>
+            <td><%= comment.email %></td>
+            <td><%=raw(truncate(comment.description, :length =>50)) %></td>
+            <td><%= distance_of_time_in_words_to_now(comment.created_at, include_seconds = true) %> ago</td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
