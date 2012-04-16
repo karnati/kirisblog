@@ -3,7 +3,7 @@
 </div>
 <ul>
 
-
+ <br/>
   <li>
     <h2>Archive</h2>
     <ul>
@@ -36,6 +36,19 @@
       <% end %>
     </ul>
   </li>
+
+   <br/>
+
+    <li>
+    <h2>Top Articles</h2>
+    <ul>
+      <% @top_articles.each do |article| %>
+          <li><%= link_to truncate(article.title, :length => 25),home_path(article.title) %></li>
+      <% end %>
+    </ul>
+  </li>
+
+
 <!--
   <li>
     <h2>Recent Comments</h2>

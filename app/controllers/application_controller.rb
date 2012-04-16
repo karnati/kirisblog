@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
 
   def recent_articles
     @recent_articles = Article.select("id,title").where(:status => true).limit(5).order("created_at DESC").all
+    @top_articles = Article.select("id,title").where(:status => true).limit(5).order("feedback_yes DESC").all
   end
 
 end
