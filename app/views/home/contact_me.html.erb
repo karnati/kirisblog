@@ -1,4 +1,22 @@
 <div class="post" style="padding-top: 57px;">
 <div class="entry">
-<h3>Contact Me</h3><br/>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin est at magna tempor tincidunt. Nullam vitae purus et odio lobortis consectetur. Aenean et augue nec nisi fringilla adipiscing quis in odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus fringilla, metus tincidunt vestibulum aliquet, sapien metus vehicula nisi, in aliquet sem enim non sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus consequat tincidunt scelerisque. Mauris feugiat nisl eget neque fermentum id ornare purus aliquet. Aenean vitae volutpat felis. Nulla dolor augue, cursus at vulputate eget, fringilla non purus. </p></div></div><br/><br/><br/><br/>
+<h3>Conatct Me</h3><br/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;You can reach me at <strong>info@kiris.in</strong></p></div></div><br/><br/>
+
+<div id="formbga">
+  <div id="formbgb">
+    <h2> </h2>
+    <%= form_for @enquiry, :url=> {:controller => "home", :action => "enquiry_mail"}, :validate => true  do |f| %>
+
+        <p style="margin:12px 0px; width: 540px;"><b> Name</b><br/><%= f.text_field :name, :class=>"text" %> </p>
+
+        <p style="margin:12px 0px; width: 540px;"><b> Email </b> (never published)<br/><%= f.text_field :email, :class=>"text" %> </p>
+
+        <p style="margin:12px 0px; width: 540px;"><b> Website</b> (optional)<br/><%= f.text_field :website, :class=>"text" %> </p>
+
+        <p style="margin:12px 0px; width: 540px;"><b> Description</b><br/><%= f.text_area :description, :class=>"text", :rows => 4, :cols =>31 %> </p>
+        <%#= hidden_field_tag :title,  @article.title %>
+        <p class="button" style="margin: 23px 2px 17px 95px;"><%= f.submit :class=>"blue_button", :value=>"Submit" %></p>
+    <% end %>
+  </div>
+</div>

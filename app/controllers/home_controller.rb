@@ -44,12 +44,26 @@ class HomeController < ApplicationController
       end
   end
 
+  def enquiry_mail
+   @enquiry = Enquiry.new(params[:enquiry])
+    EnquiryMailer.enquiry_email(@enquiry).deliver
+    respond_to do |format|
+      if @enquiry.save
+        format.html { redirect_to( :back , :notice => 'message sent successfully.') }
+        format.xml  { render :xml => @enquiry, :status => :created, :location => @enquiry }
+      else
+        format.html { render :action => "contact_me", :id => params[:title]}
+        format.xml  { render :xml => @enquiry.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
   def about_me
 
   end
 
   def contact_me
-
+     @enquiry = Enquiry.new
   end
 
 end
