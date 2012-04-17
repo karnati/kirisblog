@@ -49,7 +49,7 @@ class HomeController < ApplicationController
     EnquiryMailer.enquiry_email(@enquiry).deliver
     respond_to do |format|
       if @enquiry.save
-        format.html { redirect_to( :back , :notice => 'message sent successfully.') }
+        format.html { redirect_to( :back , :notice => 'Email sent successfully.') }
         format.xml  { render :xml => @enquiry, :status => :created, :location => @enquiry }
       else
         format.html { render :action => "contact_me", :id => params[:title]}
