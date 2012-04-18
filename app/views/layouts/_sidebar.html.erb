@@ -1,3 +1,13 @@
+<div  style="margin: 38px 0px 0px 0px;" >
+        <%= form_tag("/home/search", :method=>'get') do %>
+            <table>
+              <tr>
+                <td><%= text_field_tag :search ,'',:size => 16 %></td>
+                <td><%= submit_tag "Search" ,:class => "blue_button"%> </td>
+              </tr>
+            </table>
+        <% end %>
+</div>
 <div id="about-box">
 
 </div>

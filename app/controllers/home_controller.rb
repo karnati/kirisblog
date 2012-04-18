@@ -58,6 +58,10 @@ class HomeController < ApplicationController
     end
   end
 
+  def search
+     @articles = Article.search_articles(params[:search]).where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
+  end
+
   def about_me
 
   end

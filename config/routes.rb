@@ -32,6 +32,7 @@ Kirisblog::Application.routes.draw do
     get "about_me", :on => :collection
     get "contact_me", :on => :collection
     post "enquiry_mail", :on => :collection
+    get "search",        :on => :collection
   end
 
 
