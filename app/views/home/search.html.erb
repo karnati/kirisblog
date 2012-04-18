@@ -1,4 +1,7 @@
-
+<% if @articles.blank?  %>
+  <div class="post" style="padding: 67px 1px 820px 21px;">  <h2>
+No results found</h2> </div>
+<% else  %>
 
 <% @articles.each do |article| %>
     <div class="post" style="padding-top: 57px;">
@@ -15,15 +18,15 @@
 
     </div>
 <% end %>
-     <div style="width:auto; clear:both; margin:27px 23px 19px 228px;   color:#0066FF;">
-      <h4  ><%= will_paginate @articles%></h4>
-    </div>
+<div style="width:auto; clear:both; margin:27px 23px 19px 228px;   color:#0066FF;">
+  <h4  ><%= will_paginate @articles%></h4>
+</div>
 
+<% end   %>
 
+<style>
+    .highlight{
+        background-color:yellow;
+    }
 
-     <style>
-         .highlight{
-             background-color:yellow;
-         }
-
-     </style>
+</style>

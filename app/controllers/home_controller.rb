@@ -59,6 +59,11 @@ class HomeController < ApplicationController
   end
 
   def search
+    if params[:search].blank?
+      redirect_to :back
+      flash[:notice] = "Please type a keyword to search."
+      return
+    end
      @articles = Article.search_articles(params[:search]).where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
   end
 
