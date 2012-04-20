@@ -12,9 +12,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you for your feedback.  <br/><br/><br/><br/>
   </div>
 
-  <div id="like_count" style="margin: -64px 1px 52px 450px;">
-     <img src="/images/thumbs_up.jpg" alt="" style="margin: -24px 1px -24px -60px;"> <strong><h2 ><div id="feedback_yes_count" style="color: #337CBC;"> <%= @article.feedback_yes %></div></h2></strong>
-     <img src="/images/thumbs_down.jpg" alt="" style="margin: -26px 0px -19px 51px;"> <strong><h2 style="margin: -18px 1px 1px 112px;"><div id="feedback_no_count" style="color: #337CBC;"> <%= @article.feedback_no %></div></h2></strong>
+  <div id="like_count" style="margin: -77px 1px 10px 450px;">
+     <img src="/images/thumbs_up.jpg" alt="" style="margin: -22px 1px -27px -60px;"> <strong><h2 ><div id="feedback_yes_count" style="color: #337CBC;"> <%= @article.feedback_yes %></div></h2></strong>
+     <img src="/images/thumbs_down.jpg" alt="" style="margin: -30px 0px -16px 51px;"> <strong><h2 style="margin: -28px 1px 1px 113px;"><div id="feedback_no_count" style="color: #337CBC;"> <%= @article.feedback_no %></div></h2></strong>
   </div>
 </div>
 <div id="formbga">
@@ -30,7 +30,7 @@
 
         <p style="margin:12px 0px; width: 540px;"><b> Description</b><br/><%= f.text_area :description, :class=>"text", :rows => 4, :cols =>31 %> </p>
         <%= hidden_field_tag :title,  @article.title %>
-        <p class="button" style="margin: 23px 2px 17px 95px;"><%= f.submit :class=>"blue_button", :value=>"Submit" %></p>
+        <p class="button" style="margin: 10px 2px 17px 95px;"><%= f.submit :class=>"blue_button", :value=>"Submit" %></p>
     <% end %>
   </div>
 </div>
