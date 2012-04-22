@@ -25,7 +25,7 @@
                   <li><a class="trigger" href="#"><%= month %>  (<%= articles.count %>)</a>
                     <ul class="level2">
                       <% articles.each do |article| %>
-                          <li style="width: 190px; "><%= link_to article.title, home_path(article.title) %></li>
+                          <li style="width: 190px; "><%= link_to article.title, home_path(article.title), :title => article.title %></li>
                       <% end %>
                     </ul>
                   </li>
@@ -42,7 +42,7 @@
     <h2>Recent Articles</h2>
     <ul>
       <% @recent_articles.each do |article| %>
-          <li><%= link_to truncate(article.title, :length => 25),home_path(article.title) %></li>
+          <li><%= link_to truncate(article.title, :length => 25),home_path(article.title), :title => article.title %></li>
       <% end %>
     </ul>
   </li>
@@ -53,7 +53,7 @@
     <h2>Top Articles</h2>
     <ul>
       <% @top_articles.each do |article| %>
-          <li><%= link_to truncate(article.title, :length => 25),home_path(article.title) %></li>
+          <li><%= link_to truncate(article.title, :length => 25),home_path(article.title), :title => article.title %></li>
       <% end %>
     </ul>
   </li>
