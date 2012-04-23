@@ -1,6 +1,9 @@
 <% title "Kiris Blog | List of Articles" %>
 
 <% @articles.each do |article| %>
+    <meta name="description" content= "<%= article.description%>">
+    <meta name="keywords" content="<%= article.description%>">
+
     <div class="post" style="padding-top: 57px;">
       <h3 class="date"><%= article.created_at.strftime("%B %d, %Y") %> </h3>
       <h2 class="title"><%= link_to article.title,home_path(article.title) %></h2>
