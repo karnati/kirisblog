@@ -4,7 +4,7 @@
     <meta name="description" content= "<%= article.description.gsub(/<\/?[^>]*>/, "").gsub("&nbsp;"," ")%>">
     <meta name="keywords" content="<%= article.description.gsub(/<\/?[^>]*>/, "").gsub("&nbsp;"," ").split(" ")%>">
 
-    <div class="post" style="padding-top: 57px;">
+    <div class="post" style="padding-top: 10px;">
       <h3 class="date"><%= article.created_at.strftime("%B %d, %Y") %> </h3>
       <h2 class="title"><%= link_to article.title,home_path(article.title) %></h2>
 
