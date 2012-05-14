@@ -33,6 +33,38 @@ $(document).ready(function () {
 
 // ========================================================================================================
 
+jQuery(function($) {
+$('#theme').bind('change', function() {
+var ids_id = $('#theme').val();
+$.get("/home/load_theme", {id: ids_id},
+function(data){
 
+});
+return false
+})
+
+});
 
 // ========================================================================================================
+
+jQuery(function($) {
+$('#theme').bind('click', function() {
+    $('#theme_selection').show();
+        $('#theme_result').hide();
+})
+
+});
+
+ $(document).ready(function () {
+   if((selected_theme == "blue") || (selected_theme == "green")){
+          $('#theme_selection').hide();
+        $('#theme_result').show();
+   }
+   else{
+
+
+       $('#theme_selection').show();
+        $('#theme_result').hide();
+   }
+
+});

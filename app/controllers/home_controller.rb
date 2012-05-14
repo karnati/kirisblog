@@ -40,12 +40,12 @@ class HomeController < ApplicationController
       @article.update_attribute(:feedback_no, @article.feedback_no + 1)
     end
     respond_to do |format|
-        format.js
-      end
+      format.js
+    end
   end
 
   def enquiry_mail
-   @enquiry = Enquiry.new(params[:enquiry])
+    @enquiry = Enquiry.new(params[:enquiry])
     EnquiryMailer.enquiry_email(@enquiry).deliver
     respond_to do |format|
       if @enquiry.save
@@ -64,7 +64,7 @@ class HomeController < ApplicationController
       flash[:notice] = "Please type a keyword to search."
       return
     end
-     @articles = Article.search_articles(params[:search]).where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
+    @articles = Article.search_articles(params[:search]).where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
   end
 
   def about_me
@@ -72,7 +72,19 @@ class HomeController < ApplicationController
   end
 
   def contact_me
-     @enquiry = Enquiry.new
+    @enquiry = Enquiry.new
+  end
+
+  def load_theme
+
+   session[:theme]=params[:id]
+
+
+  end
+
+  def change_theme
+     puts"********************************************8"
+    redirect_to :back
   end
 
 end
