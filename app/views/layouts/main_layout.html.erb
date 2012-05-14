@@ -15,12 +15,12 @@
 <div id="container">
   <!--header starts-->
   <div id="header">
-    <div style="float: right;color: white;" id="theme_selection">
-      <%= select_tag :theme  ,  options_for_select(["blue","green"]),  :include_blank => "select theme" %>
+<!--    <div style="float: right;color: white;" id="theme_selection">
+      <%#= select_tag :theme  ,  options_for_select(["blue","green"]),  :include_blank => "select theme" %>
     </div>
     <div id="theme_result" style="color: white;float: right;">
-          you selected <%= session[:theme] %>    <%= link_to "change theme", change_theme_home_path, :id => "change_theme" %>
-    </div>
+          you selected <%#= session[:theme] %>    <%#= link_to "change theme", change_theme_home_index_path, :id => "change_theme" %>
+    </div>-->
     <%= javascript_tag do %>
         window.selected_theme = "<%=j session[:theme] %>";
     <% end %>
