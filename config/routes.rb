@@ -34,7 +34,6 @@ Kirisblog::Application.routes.draw do
     post "enquiry_mail", :on => :collection
     get "search",        :on => :collection
     get "load_theme", :on => :collection
-    post "change_theme", :on => :collection
   end
 
 

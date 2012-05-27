@@ -48,7 +48,7 @@ return false
 // ========================================================================================================
 
 jQuery(function($) {
-$('#theme').bind('click', function() {
+$('#change_theme').bind('click', function() {
     $('#theme_selection').show();
         $('#theme_result').hide();
 })
@@ -56,13 +56,12 @@ $('#theme').bind('click', function() {
 });
 
  $(document).ready(function () {
+
    if((selected_theme == "blue") || (selected_theme == "green")){
           $('#theme_selection').hide();
         $('#theme_result').show();
    }
    else{
-
-
        $('#theme_selection').show();
         $('#theme_result').hide();
    }

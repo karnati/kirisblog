@@ -4,7 +4,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title><%= content_for?(:title) ? content_for(:title) : 'Kiris Blog' %></title>
   <%#= stylesheet_link_tag "default" %>
+  <% if session[:theme] == "blue" %>
   <%= stylesheet_link_tag "stylesheet_main" %>
+      <% else %>
+          <%= stylesheet_link_tag "stylesheet_green" %>
+      <% end %>
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'rails.validations' %>
   <link rel="shortcut icon" href="/images/favicon.png" />
@@ -19,7 +23,7 @@
       <%#= select_tag :theme  ,  options_for_select(["blue","green"]),  :include_blank => "select theme" %>
     </div>
     <div id="theme_result" style="color: white;float: right;">
-          you selected <%#= session[:theme] %>    <%#= link_to "change theme", change_theme_home_index_path, :id => "change_theme" %>
+          you selected <%#= session[:theme] %>    <%#= link_to "change theme", '#', :id => "change_theme" %>
     </div>-->
     <%= javascript_tag do %>
         window.selected_theme = "<%=j session[:theme] %>";

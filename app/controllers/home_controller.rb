@@ -76,15 +76,8 @@ class HomeController < ApplicationController
   end
 
   def load_theme
-
    session[:theme]=params[:id]
-
-
   end
 
-  def change_theme
-     puts"********************************************8"
-    redirect_to :back
-  end
 
 end

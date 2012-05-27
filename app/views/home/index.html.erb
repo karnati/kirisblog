@@ -1,4 +1,4 @@
-<% title "Kiris Blog | List of Articles" %>
+<% title "Kiris Blog | Ruby on Rails Articles" %>
 
 <% @articles.each do |article| %>
     <meta name="description" content= "<%= article.description.gsub(/<\/?[^>]*>/, "").gsub("&nbsp;"," ")%>">
