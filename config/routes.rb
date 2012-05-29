@@ -2,9 +2,13 @@ Kirisblog::Application.routes.draw do
 
 
 
+
+
+=begin
   get "users/index"
 
   get "users/show"
+=end
 
     devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions"}
 
@@ -24,6 +28,13 @@ Kirisblog::Application.routes.draw do
       put   "manage_status",                                   :on => :member
       get "search",                                                    :on => :collection
     end
+
+    resources :subscribers do
+      get   "manage_status",                                   :on => :member
+      put   "manage_status",                                   :on => :member
+      get "search",                                            :on => :collection
+    end
+
     get "dashboard/index"
   end
 

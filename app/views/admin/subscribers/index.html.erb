@@ -1,0 +1,37 @@
+<% title "Kiris Blog | Listing Subscribers" %>
+<div class="list" id="template_category_list">
+  <div class="list" id="admintable">
+    <table width="100%">
+      <tbody><tr><td align="left"><h3 align="left">Listing Subscribers</h3></td>
+        <td align="right"><b><i>per page</i></b><%= per_page%> | <%= page_entries_info @subscribers %></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table cellspacing="1" class="tablesorter">
+      <thead>
+      <tr>
+        <th>E-mail</th>
+        <th>Status</th>
+
+
+
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @subscribers.each do |subscriber| %>
+          <tr class="<%= cycle( 'even','odd') %>">
+            <td><%= highlight(truncate(subscriber.email, :length =>75), params[:search]) %></td>
+             <td> </span> <i id = "status_<%= subscriber.id %>">   <%= link_to subscriber.status? ? "Active" : "Inactive",manage_status_admin_subscriber_path(:id => subscriber.id)  %> </i></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+    <div style="width:auto; clear:both; margin:10px 0px 10px 0px; float:right; color:#0066FF;">
+      <h4 align="right"><%= will_paginate @subscribers%></h4>
+    </div>
+
+  </div>
+</div>

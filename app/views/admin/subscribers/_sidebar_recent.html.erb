@@ -1,0 +1,11 @@
+<div class="panel">
+  <div class="caption">Recent Subscribers        </div>
+  <div id="recently">
+    <% @recent.each do |subscriber| %>
+        <li id="recent_subscriber_<%= subscriber.id %>" class="">
+          <dt><%= link_to subscriber.email,  admin_subscriber_path(subscriber) %></dt>
+          <tt><br /></tt>
+        </li>
+    <% end %>
+  </div>
+</div>
