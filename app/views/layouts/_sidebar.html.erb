@@ -20,25 +20,23 @@
   </li>
    </ul>
 <div id="about-box"></div>
-<!--
 <div  style="margin: 38px 0px 0px 0px;" >
       <ul>
     <li>
     <h2>Subscribe Articles</h2>
     <ul>
       <li>
-         <%#= form_for @subsciber, :url=> {:controller => "home", :action => "create_subscriber"}, :validate => true do |f| %>
+         <%= form_for @subsciber, :url=> {:controller => "home", :action => "create_subscriber"}, :validate => true do |f| %>
 
-        <p style="margin:12px 0px; width: 270px;"><b> Email</b><br/>  <%#= f.text_field :email, :class=>"text"  %>  </p>
+        <p style="margin:12px 0px; width: 270px;"><b> Email</b><br/>  <%= f.text_field :email, :class=>"text"  %>  </p>
 
-        <p class="button" style="margin: 10px 1px 1px 92px;"><%#= f.submit :class=>"blue_button", :value=>"Subscribe" %></p>
-    <%# end %>
+        <p class="button" style="margin: 10px 1px 1px 92px;"><%= f.submit :class=>"blue_button", :value=>"Subscribe" %></p>
+    <% end %>
         </li>
     </ul>
   </li>
    </ul>
 </div>
--->
 <ul>
 
  <br/>

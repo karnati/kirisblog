@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   before_filter :month_details, :recent_articles
   def index
     @articles =Article.where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
-  
+     @subsciber = Subscriber.new
     # @comment = Comment.new
   end
 
@@ -65,6 +65,18 @@ class HomeController < ApplicationController
       return
     end
     @articles = Article.search_articles(params[:search]).where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
+  end
+
+  def create_subscriber
+    @subscriber = Subscriber.new(params[:subscriber])
+
+      if @subscriber.save
+        redirect_to :back , :notice => 'Email sent successfully.'
+
+      else
+        redirect_to :back , :error => 'Email cant be blank.'
+
+    end
   end
 
   def about_me
