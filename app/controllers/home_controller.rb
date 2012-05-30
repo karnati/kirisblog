@@ -60,6 +60,7 @@ class HomeController < ApplicationController
   end
 
   def search
+     @subsciber = Subscriber.new
     if params[:search].blank?
       redirect_to :back
       flash[:notice] = "Please type a keyword to search."
