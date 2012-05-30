@@ -82,11 +82,12 @@ class HomeController < ApplicationController
   end
 
   def about_me
-
+   @subsciber = Subscriber.new
   end
 
   def contact_me
     @enquiry = Enquiry.new
+    @subsciber = Subscriber.new
   end
 
   def load_theme
