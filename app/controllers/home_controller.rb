@@ -11,6 +11,7 @@ class HomeController < ApplicationController
     @article = Article.find_by_title(params[:id])
     @comments = Comment.where(:article_id => @article.id, :status => true)
     @comment = Comment.new
+     @subsciber = Subscriber.new
   end
 
   def create
