@@ -1,10 +1,11 @@
 <style>
-  input.text{
-      width: 226px;
-  }
+    input.text{
+        width: 226px;
+    }
 </style>
-    <ul>
-    <li>
+<div id="about-box"></div>
+<ul>
+  <li>
     <h2>Search Articles</h2>
     <ul>
       <li>
@@ -12,34 +13,18 @@
             <table>
               <tr>
                 <td><%= text_field_tag :search ,'',  :class=>"text"  %></td></tr>
-                <tr> <br/><td align="center"><%= submit_tag "Search" ,:class => "blue_button"%> </td>
+              <tr> <br/><td align="center"><%= submit_tag "Search" ,:class => "blue_button"%> </td>
               </tr>
             </table>
         <% end %> </li>
     </ul>
   </li>
-   </ul>
-<div id="about-box"></div>
-<div  style="margin: 38px 0px 0px 0px;" >
-      <ul>
-    <li>
-    <h2>Subscribe Articles</h2>
-    <ul>
-      <li>
-         <%= form_for @subsciber, :url=> {:controller => "home", :action => "create_subscriber"}, :validate => true do |f| %>
+</ul>
 
-        <p style="margin:12px 0px; width: 270px;"><b> Email</b><br/>  <%= f.text_field :email, :class=>"text"  %>  </p>
 
-        <p class="button" style="margin: 10px 1px 1px 92px;"><%= f.submit :class=>"blue_button", :value=>"Subscribe" %></p>
-    <% end %>
-        </li>
-    </ul>
-  </li>
-   </ul>
-</div>
 <ul>
 
- <br/>
+  <br/>
   <li>
     <h2>Archive</h2>
     <ul>
@@ -73,9 +58,9 @@
     </ul>
   </li>
 
-   <br/>
+  <br/>
 
-    <li>
+  <li>
     <h2>Top Articles</h2>
     <ul>
       <% @top_articles.each do |article| %>
@@ -83,54 +68,74 @@
       <% end %>
     </ul>
   </li>
-
-
-  <li>
-    <h2></h2>
+  <div  style="margin: 38px 0px 0px 0px;" >
     <ul>
-       <!--<iframe src="http://www.facebook.com/plugins/like.php?href=kiris.in&amp;layout=standard&amp;show_faces=true&amp;width=250&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>-->
-       <iframe src="http://www.facebook.com/plugins/like.php?href=kiris.in&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>
-<br/>
+      <li>
+        <h2>Subscribe Articles</h2>
+        <ul>
+          <li>
+            <%= form_for @subsciber, :url=> {:controller => "home", :action => "create_subscriber"}, :validate => true do |f| %>
+
+                <p style="margin:12px 0px; width: 270px;"><b> Email</b><br/>  <%= f.text_field :email, :class=>"text"  %>  </p>
+
+                <p class="button" style="margin: 10px 1px 1px 92px;"><%= f.submit :class=>"blue_button", :value=>"Subscribe" %></p>
+            <% end %>
+          </li>
         </ul>
-  </li>
+      </li>
+    </ul>
+  </div>
 
-   <li>
+  <li>
     <h2></h2>
     <ul>
-  <!-- hitwebcounter Code START -->
- &nbsp; &nbsp; &nbsp;<a href="http://www.hitwebcounter.com/" target="_blank">
-<img src="http://hitwebcounter.com/counter/counter.php?page=4453597&style=0005&nbdigits=6&type=page&initCount=0" title="get counter for Freewebs.com" Alt="get counter for Freewebs.com"   border="0" >
-</a>
-<br>
-<!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com/countersiteservices.php" title="Web Counter"
-target="_blank" style="font-family: Arial, Geneva , Helvetica, sans-serif;
-text-decoration: none ; color: #6D7A78; font-size: 12px;">
-<code></code></a>
-     <!-- hitwebcounter Code START -->
-     <a href="http://www.hitwebcounter.com/" target="_blank">
-      <img src="http://hitwebcounter.com/counter/counter.php?page=4453601&style=0005&nbdigits=6&type=ip&initCount=0" title="get counter for Freewebs.com" Alt="get counter for Freewebs.com"   border="0" >
-      </a>
-      <br>
-      <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com/countersiteservices.php" title="Web Counter"
-      target="_blank" style="font-family: Arial, Geneva , Helvetica, sans-serif;
-      text-decoration: none ; color: #6D7A78; font-size: 12px;">
-      <code> </code></a>
-
-              </ul>
-  </li>
-
-<!--
-  <li>
-    <h2>Recent Comments</h2>
-    <ul>
-      <li><a href="#">comment1</a></li>
-      <li><a href="#">comment2</a></li>
-      <li><a href="#">comment3</a></li>
-      <li><a href="#">comment4</a></li>
-      <li><a href="#">comment5</a></li>
-
+      <!--<iframe src="http://www.facebook.com/plugins/like.php?href=kiris.in&amp;layout=standard&amp;show_faces=true&amp;width=250&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>-->
+      <iframe src="http://www.facebook.com/plugins/like.php?href=kiris.in&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>
+      <br/>
     </ul>
   </li>
--->
-     <br/><br/><br/><br/>
+
+
+<li>
+  <h2></h2>
+  <ul>
+    <!-- hitwebcounter Code START -->
+    &nbsp; &nbsp; &nbsp;<a href="http://www.hitwebcounter.com/" target="_blank">
+    <img src="http://hitwebcounter.com/counter/counter.php?page=4453597&style=0005&nbdigits=6&type=page&initCount=0" title="get counter for Freewebs.com" Alt="get counter for Freewebs.com"   border="0" >
+  </a>
+    <br>
+    <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com/countersiteservices.php" title="Web Counter"
+                                 target="_blank" style="font-family: Arial, Geneva , Helvetica, sans-serif;
+          text-decoration: none ; color: #6D7A78; font-size: 12px;">
+    <code></code></a>
+    <!-- hitwebcounter Code START -->
+    <a href="http://www.hitwebcounter.com/" target="_blank">
+      <img src="http://hitwebcounter.com/counter/counter.php?page=4453601&style=0005&nbdigits=6&type=ip&initCount=0" title="get counter for Freewebs.com" Alt="get counter for Freewebs.com"   border="0" >
+    </a>
+    <br>
+    <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com/countersiteservices.php" title="Web Counter"
+                                 target="_blank" style="font-family: Arial, Geneva , Helvetica, sans-serif;
+          text-decoration: none ; color: #6D7A78; font-size: 12px;">
+    <code> </code></a>
+
+  </ul>
+
+</li>
+
+  <!--
+    <li>
+      <h2>Recent Comments</h2>
+      <ul>
+        <li><a href="#">comment1</a></li>
+        <li><a href="#">comment2</a></li>
+        <li><a href="#">comment3</a></li>
+        <li><a href="#">comment4</a></li>
+        <li><a href="#">comment5</a></li>
+
+      </ul>
+    </li>
+  -->
+  <br/><br/><br/><br/>
 </ul>
+
+
