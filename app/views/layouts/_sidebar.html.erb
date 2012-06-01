@@ -23,7 +23,7 @@
 
 
 <ul>
-  <!-- this style will be remove on 2013 , this style is for open the tree view -->
+  <!-- this style will be remove on 2013 , this style is for open the tree view,  and class name replace with "trigger opened" to "trigger" -->
   <style>
     .level1{
         display: block;
@@ -35,7 +35,7 @@
     <ul>
       <li><div  >
         <% @articles_by_year.each do |year, posts| %>
-            <a class="trigger" href="#"><%= year%> (<%= posts.count %> ) </a>
+            <a class="trigger opened" href="#"><%= year%> (<%= posts.count %> ) </a>
             <ul class="level1">
               <% posts.group_by { |post| post.created_at.strftime("%B") }.each do |month, articles| %>
                   <li><a class="trigger" href="#"><%= month %>  (<%= articles.count %>)</a>
