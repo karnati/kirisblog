@@ -12,6 +12,18 @@ class Admin::SubscribersController < ApplicationController
     end
   end
 
+    def search
+      @subscribers = Subscriber.search_subscribers(params[:search]).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
+    end
+
+    def manage_status
+    subscriber = Subscriber.find(params[:id])
+     subscriber.toggle! :status
+    redirect_to :back
+    flash[:success] = "Status changed Succesfully"
+  end
+
+
       protected
 
   def get_details
