@@ -5,12 +5,12 @@
   <title><%= content_for?(:title) ? content_for(:title) : 'Kiris Blog' %></title>
   <%#= stylesheet_link_tag "default" %>
   <%# if session[:theme] == "blue" %>
-  <%= stylesheet_link_tag "stylesheet_main" %>
+  <%= stylesheet_link_tag "stylesheet_main", 'easyslider' %>
   <%# else %>
   <%#= stylesheet_link_tag "stylesheet_green" %>
   <%# end %>
   <%= javascript_include_tag :defaults %>
-  <%= javascript_include_tag 'rails.validations' %>
+  <%= javascript_include_tag 'rails.validations','easySlider1.7' %>
   <link rel="shortcut icon" href="/images/favicon.png" />
 </head>
 
@@ -50,6 +50,29 @@
   <div id="container">
     <!--middle starts-->
     <div id="middle_container">
+
+<!--      <div id="slidercontent" style="width: 900px; margin: 30px" align="center">
+
+		<div id="slider">
+			<ul>
+				<li><a href="http://templatica.com/preview/30"><img src="/images/slider/2.jpg" alt="Css Template Preview" /></a></li>
+				<li><a href="http://templatica.com/preview/7"><img src="/images/slider/2.jpg" alt="Css Template Preview" /></a></li>
+				<li><a href="http://templatica.com/preview/25"><img src="/images/slider/2.jpg" alt="Css Template Preview" /></a></li>
+				<li><a href="http://templatica.com/preview/26"><img src="/images/slider/2.jpg" alt="Css Template Preview" /></a></li>
+				<li><a href="http://templatica.com/preview/27"><img src="/images/slider/2.jpg" alt="Css Template Preview" /></a></li>
+			</ul>
+		</div>
+
+	</div>-->
+
+<script type="text/javascript">
+		$(document).ready(function(){
+			$("#slider").easySlider({
+				auto: true,
+				continuous: true
+			});
+		});
+	</script>
       <div class="left">
         <%= render "/layouts/import_flash" %>
         <%= yield %>
