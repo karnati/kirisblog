@@ -5,6 +5,10 @@
 
   <tr><td width="10%"><b>Title</b></td>
     <td ><%= @article.title %></td></tr>
+   <tr><td width="10%"><b>Likes</b></td>
+    <td ><%= @article.feedback_yes %></td></tr>
+   <tr><td width="10%"><b>Unlikes</b></td>
+    <td ><%= @article.feedback_no %></td></tr>
   <tr><td width="10%"><b>Description</b></td>
     <td ><%=raw(@article.description)%></td></tr>
 
