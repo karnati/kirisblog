@@ -41,6 +41,7 @@ Kirisblog::Application.routes.draw do
   resources :home do
     get "feedback", :on => :collection
     get "about_me", :on => :collection
+    get "welcome", :on => :collection
     get "contact_me", :on => :collection
     post "enquiry_mail", :on => :collection
     get "search",        :on => :collection

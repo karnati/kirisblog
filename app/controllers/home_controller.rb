@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  layout 'main_layout'
+  layout 'main_layout'  , :except => :welcome
   before_filter :month_details, :recent_articles
   def index
     @articles =Article.where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
@@ -92,6 +92,10 @@ class HomeController < ApplicationController
 
   def load_theme
    session[:theme]=params[:id]
+  end
+
+  def welcome
+       @subsciber = Subscriber.new
   end
 
 

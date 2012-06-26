@@ -5,7 +5,11 @@
   <title><%= content_for?(:title) ? content_for(:title) : 'Kiris Blog' %></title>
   <%#= stylesheet_link_tag "default" %>
   <%# if session[:theme] == "blue" %>
+  <% if action_name == "welcome" %>
+      <%= stylesheet_link_tag "welcome", 'nivo-slider','nivo_default','nivo_style' %>
+      <% else %>
   <%= stylesheet_link_tag "stylesheet_main", 'nivo-slider','nivo_default','nivo_style' %>
+      <% end %>
   <%# else %>
   <%#= stylesheet_link_tag "stylesheet_green" %>
   <%# end %>
