@@ -5,7 +5,8 @@
 
 
   <title> Kiris Blog</title>
-  <%= stylesheet_link_tag 'welcome'  %>
+
+  <%= stylesheet_link_tag "welcome", 'nivo-slider','nivo_default','nivo_style' %>
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'rails.validations','jquery.nivo.slider' %>
 
@@ -37,17 +38,41 @@
 <!-- Start CONTENT CONTAINER -->
 <div id="wrapper">
   <div id="contentArea">
+    <div id="wrapper1">
+
+
+
+      <div class="slider-wrapper theme-default"  style="height:240px;">
+        <div id="slider" class="nivoSlider">
+          <img src="/images/slider/5.jpg" data-thumb="images/toystory.jpg" alt="" />
+          <a href="http://kiris.in"><img src="/images/slider/4.jpg" data-thumb="/images/slider/2.jpg" alt="" title="This is an example of a caption" /></a>
+          <img src="/images/slider/6.jpg" data-thumb="/images/slider/02.jpg" alt="" data-transition="slideInLeft" />
+          <img src="/images/slider/3.jpg" data-thumb="/images/slider/3.jpg" alt="" title="#htmlcaption" />
+          <img src="/images/slider/7.jpg" />
+
+        </div>
+        <div id="htmlcaption" class="nivo-html-caption">
+          <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="http://kiris.in">Read more</a>.
+        </div>
+      </div>
+
+    </div>
     <!-- begin home boxes -->
     <div class="homeBox boxgreen">
       <h2>Ruby on Rails</h2>
       <p></p>
-      <p class="whiteText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in odio non neque mattis lacinia vitae ut urna. Nam rhoncus mollis dapibus. Mauris vitae semper nunc. Vivamus fringilla tincidunt arcu, non pretium nibh volutpat ullamcorper. Nullam tincidunt luctus magna et porta. Praesent a nisl vel urna laoreet aliquet. Pellentesque porttitor sapien ac nulla pellentesque facilisis.</p>
+      <p class="whiteText">Ruby on Rails is an open-source web framework that's optimized for programmer happiness and sustainable productivity. It lets you write beautiful code by favoring convention over configuration. Ruby on Rails is a breakthrough in lowering the barriers of entry to programming.
+Powerful web applications that formerly might have taken weeks or months
+to develop can be produced in a matter of days.</p>
       <p></p>
 
     </div>
     <div class="homeBox boxorange">
       <h2>Jquery</h2>
-      <span ><p class="whiteText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in odio non neque mattis lacinia vitae ut urna. Nam rhoncus mollis dapibus. Mauris vitae semper nunc. Vivamus fringilla tincidunt arcu, non pretium nibh volutpat ullamcorper. Nullam tincidunt luctus magna et porta. Praesent a nisl vel urna laoreet aliquet. Pellentesque porttitor sapien ac nulla pellentesque facilisis. </p></span>
+      <span ><p class="whiteText">
+jQuery is a cross-browser JavaScript library designed to simplify the client-side scripting of HTML. It was released in January 2006 at BarCamp NYC by John Resig.
+
+jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. jQuery is designed to change the way that you write JavaScript. </p></span>
 
     </div>
     <div class="homeBox boxred last">
@@ -58,22 +83,7 @@
     </div>
     <!-- end home boxes -->
 
-    <div id="galleryBox">
-      <div id="galleryTextArea">
-        <p class="galleryText1">some images from</p>
-        <p class="galleryText2">Kiris Blog</p>
-      </div>
-      <img class="homeGalleryPic" src="/images/removed/home-gallery-1.jpg" alt="home-gallery-1" width="100" height="100">
-      <img class="homeGalleryPic" src="/images/removed/home-gallery-2.jpg" alt="home-gallery-2" width="100" height="100">
-      <img class="homeGalleryPic" src="/images/removed/home-gallery-3.jpg" alt="home-gallery-3" width="100" height="100">
-      <img class="homeGalleryPic" src="/images/removed/home-gallery-4.jpg" alt="home-gallery-4" width="100" height="100">
-    </div>
 
-    <div id="contactBox">
-      <p class="galleryText1">contact one of</p>
-      <p class="galleryText2">our member</p><br>
-      <p class="contactLink">select a member from the list for details</p>
-    </div>
 
     <!-- END HOME CONTENT -->
 
@@ -87,15 +97,14 @@
 <!-- Start FOOTER -->
 <div id="footerContainer">
 
-  <div id="footerArea">
-
-    </div>
-
-
-    <p class="credit">site by <a href="http://www.kiris.in/">Kiris</a></p>
-  </div>
+  <div id="footerArea"></div>
 </div>
 <!-- End FOOTER -->
 
 </body>
 </html>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+</script>
