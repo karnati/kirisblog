@@ -1,8 +1,4 @@
-<style>
-    input.text{
-        width: 226px;
-    }
-</style>
+
 <div id="about-box"></div>
 <ul>
   <li>
@@ -12,8 +8,8 @@
         <%= form_tag("/home/search", :method=>'get') do %>
             <table>
               <tr>
-                <td><%= text_field_tag :search ,'',  :class=>"text", :size => 20  %></td></tr>
-              <tr> <br/><td align="center"><%= submit_tag "Search" ,:class => "blue_button"%> </td>
+                <td><%= text_field_tag :search ,'',  :class=>"text", :size => 20 ,:style => " width: 155px;" %>
+            <%= submit_tag "Search" ,:class => "blue_button"%> </td>
               </tr>
             </table>
         <% end %> </li>
@@ -81,7 +77,7 @@
           <li>
             <%= form_for @subsciber, :url=> {:controller => "home", :action => "create_subscriber"}, :validate => true do |f| %>
 
-                <p style="margin:12px 0px; width: 270px;"><b> Email</b><br/>  <%= f.text_field :email, :class=>"text"  %>  </p>
+                <p style="margin:12px 0px; width: 270px;"><b> Email</b><br/>  <%= f.text_field :email, :class=>"text"  ,:style => " width: 226px;" %>  </p>
 
                 <p class="button" style="margin: 10px 1px 1px 92px;"><%= f.submit :class=>"blue_button", :value=>"Subscribe" %></p>
             <% end %>

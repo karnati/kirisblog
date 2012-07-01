@@ -5,21 +5,21 @@ No results found</h2> </div>
 <% else  %>
 
 <% @articles.each do |article| %>
-    <div class="post" style="padding-top: 57px;">
+    <div class="post" style="padding-top: 57px; width: auto;">
       <h3 class="date"><%= article.created_at.strftime("%B %d, %Y") %> </h3>
-      <h2 class="title" style="color: #0066CC"> <%=  highlight(article.title, params[:search]) %></h2>
+      <h2 class="title" style="color: #4CC417"> <%=  highlight(article.title, params[:search]) %></h2>
 
       <div class="entry">
         <p><%= raw highlight(article.description, params[:search]) %></p> <br/> <br/>
       </div>
       <p class="meta">
-        <%= link_to "Read More ...",home_path(article.title),:class => "blue_button" %>  &nbsp; &nbsp; &nbsp; &nbsp;
-        <%= link_to "View Comments ( #{article.comments.count})",home_path(article.title),:class => "blue_button" %>
+        <%= link_to "Show",home_path(article.title),:class => "blue_button" %>
+        <%#= link_to "View Comments ( #{article.comments.count})",home_path(article.title),:class => "blue_button" %>
       </p>
 
     </div>
 <% end %>
-<div style="width:auto; clear:both; margin:27px 23px 19px 228px;   color:#0066FF;">
+<div style="width:auto; clear:both; margin:27px 23px 19px 228px;   color:#4CC417;">
   <h4  ><%= will_paginate @articles%></h4>
 </div>
 

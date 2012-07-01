@@ -11,7 +11,7 @@
   </div>
   <br/><br/><br/><br/>
   <div class="feedback" style="float: left">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Was this post usefull to you? <%= link_to "Yes", feedback_home_index_path(:feedback => "yes", :id =>@article.id), :class => "yes blue_button", :remote => true, :id => "feedback_yes"%> <%= link_to "No", feedback_home_index_path(:feedback => "no", :id =>@article.id), :class => "yes blue_button",:remote => true, :id => "feedback_no"%>       <br/><br/><br/><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Was this post usefull to you? &nbsp;&nbsp; <%= link_to "No", feedback_home_index_path(:feedback => "no", :id =>@article.id), :class => "yes blue_button",:remote => true, :id => "feedback_no"%>  <%= link_to "Yes", feedback_home_index_path(:feedback => "yes", :id =>@article.id), :class => "yes blue_button", :remote => true, :id => "feedback_yes"%>
   </div>
   <div class="after_feedback">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you for your feedback.  <br/><br/><br/><br/>
