@@ -41,9 +41,13 @@ $(document).ready(function () {
 });
 
 
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+
 // ========================================================================================================
 
-jQuery(function($) {
+/*jQuery(function($) {
 $('#theme').bind('change', function() {
 var ids_id = $('#theme').val();
 $.get("/home/load_theme", {id: ids_id},
@@ -53,9 +57,10 @@ function(data){
 return false
 })
 
-});
+});*/
 
 // ========================================================================================================
+/*
 
 jQuery(function($) {
 $('#change_theme').bind('click', function() {
@@ -76,4 +81,4 @@ $('#change_theme').bind('click', function() {
         $('#theme_result').hide();
    }
 
-});
+});*/
