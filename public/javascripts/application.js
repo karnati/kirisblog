@@ -18,6 +18,16 @@
         });
     });
 
+    $(document).ready(function(){
+
+        $(".after_feedback").hide();
+        $('.feedback').click(function(){
+
+            $(".feedback").hide();
+            $(".after_feedback").show();
+        });
+    });
+
 // ========================================================================================================
 
 

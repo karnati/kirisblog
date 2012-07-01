@@ -1,4 +1,5 @@
 <% title "Kiris Blog | #{@article.title}" %>
+<div class="left">
 <meta name="description" content= "<%= @article.description.gsub(/<\/?[^>]*>/, "").gsub("&nbsp;"," ") %>">
 <meta name="keywords" content="<%= @article.description.gsub(/<\/?[^>]*>/, "").gsub("&nbsp;"," ").split(" ")%>">
 <div class="post" style="padding-top: 57px;">
@@ -9,7 +10,7 @@
     <p><%= raw(@article.description) %></p>
   </div>
   <br/><br/><br/><br/>
-  <div class="feedback">
+  <div class="feedback" style="float: left">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Was this post usefull to you? <%= link_to "Yes", feedback_home_index_path(:feedback => "yes", :id =>@article.id), :class => "yes blue_button", :remote => true, :id => "feedback_yes"%> <%= link_to "No", feedback_home_index_path(:feedback => "no", :id =>@article.id), :class => "yes blue_button",:remote => true, :id => "feedback_no"%>       <br/><br/><br/><br/>
   </div>
   <div class="after_feedback">
@@ -70,17 +71,19 @@
 
 <% end %>
 </div>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".after_feedback").hide();
-        $('.feedback').click(function(){
-            $(".feedback").hide();
-            $(".after_feedback").show();
-        });
-    });
+
+
+</div>
+<div class="right">
+  <div id="sidebar">
+    <%= render "/layouts/sidebar" %>
+  </div>
+</div>
+
+
+
+  <script type="text/javascript">
+
 </script>
-
-
-
 
 

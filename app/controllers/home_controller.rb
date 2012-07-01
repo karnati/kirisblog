@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-  layout 'main_layout'  , :except => :welcome
+ # layout 'main_layout'  , :except => :welcome
+  layout 'welcome'
   before_filter :month_details, :recent_articles
   def index
     @articles =Article.where(:status => true).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
