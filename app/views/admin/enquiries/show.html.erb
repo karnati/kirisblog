@@ -1,0 +1,27 @@
+<% title "Kiris Blog |  Enquiries show" %>
+<br />
+<div class="title" style="border:none;"><span>Admin Details</span></div>
+<table cellspacing="1" class="tablesorter" style="width:100%;">
+
+  <tr><td width="10%"><b>Name</b></td>
+    <td ><%= @enquiry.name %></td></tr>
+
+  <tr><td width="10%"><b>Email</b></td>
+      <td ><%= @enquiry.email %></td></tr>
+
+  <tr><td width="10%"><b>Website</b></td>
+      <td ><%= @enquiry.website %></td></tr>
+  <tr><td width="10%"><b>Subject</b></td>
+      <td ><%= @enquiry.subject %></td></tr>
+
+  <tr><td width="10%"><b>Description</b></td>
+      <td ><%= @enquiry.description %></td></tr>
+  <tr><td width="10%"><b>Created at</b></td>
+    <td ><%= distance_of_time_in_words_to_now(@enquiry.created_at, include_seconds = true) %> ago</td></tr>
+  <tr><td width="10%"><b>Updated at</b></td>
+    <td ><%= distance_of_time_in_words_to_now(@enquiry.updated_at, include_seconds = true) %> ago</td></tr>
+</table>
+
+
+
+<%= link_to 'Back', admin_enquiries_path %>

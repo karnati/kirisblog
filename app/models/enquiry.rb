@@ -4,6 +4,10 @@ class Enquiry < ActiveRecord::Base
 
   validates :description, :presence => true, :length => {:minimum => 3 }
 
+      def self.search_enquiries(query)
+    where("subject LIKE ? or   name LIKE ? or email LIKE ? ", "%#{query}%" , "%#{query}%" , "%#{query}%"  )
+      end
+
 end
 
 

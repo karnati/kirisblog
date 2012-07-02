@@ -1,20 +1,12 @@
 Kirisblog::Application.routes.draw do
 
-
-
-
-
-=begin
-  get "users/index"
-
-  get "users/show"
-=end
-
     devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions"}
 
-
-
   namespace :admin do
+
+    resources :enquiries , :only =>["index","show"] do
+        get "search",                                                    :on => :collection
+    end
     resources :articles do
       get   "manage_comment_status",                                   :on => :member
       put   "manage_comment_status",                                   :on => :member

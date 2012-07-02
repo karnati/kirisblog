@@ -1,0 +1,11 @@
+<div class="panel">
+  <div class="caption">Recent Enquiries        </div>
+  <div id="recently">
+    <% @recent.each do |enquiry| %>
+        <li id="recent_enquiry_<%= enquiry.id %>" class="">
+          <dt><%= link_to enquiry.name,  admin_enquiry_path(enquiry) %></dt>
+          <tt><br /></tt>
+        </li>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<% title "Kiris Blog | Listing Enquiries" %>
+<div class="list" id="template_category_list">
+  <div class="list" id="admintable">
+    <table width="100%">
+      <tbody><tr><td align="left"><h3 align="left">Listing Enquiries</h3></td>
+        <td align="right"><b><i>per page</i></b><%= per_page%> | <%= page_entries_info @enquiries %></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table cellspacing="1" class="tablesorter">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-mail</th>
+
+        <th>Subject</th>
+        <th></th>
+
+
+
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @enquiries.each do |enquiry| %>
+          <tr class="<%= cycle( 'even','odd') %>">
+            <td><%= highlight(enquiry.name, params[:search]) %></td>
+            <td><%= highlight(enquiry.email, params[:search]) %></td>
+
+            <td><%= highlight(enquiry.subject, params[:search]) %></td>
+             <td>  <%= link_to 'Show', admin_enquiry_path(enquiry) %>  </td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+    <div style="width:auto; clear:both; margin:10px 0px 10px 0px; float:right; color:#0066FF;">
+      <h4 align="right"><%= will_paginate @enquiries%></h4>
+    </div>
+
+  </div>
+</div>
