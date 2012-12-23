@@ -57,7 +57,7 @@ Kirisblog::Application.configure do
   :tls => 'true',
   :domain => 'gmail.com',
   :authentication => :plain,
-  :user_name => 'kirisblog@gmail.com',
-  :password => 'kiran@123'
+  :user_name => 'srijanpharma@gmail.com',
+  :password => 'indigenius123'
 }
 end

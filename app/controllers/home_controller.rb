@@ -74,7 +74,7 @@ class HomeController < ApplicationController
     @subscriber = Subscriber.new(params[:subscriber])
 
       if @subscriber.save
-        redirect_to :back , :notice => 'Email sent successfully.'
+        redirect_to :back , :notice => 'Subscribed successfully.'
 
       else
         redirect_to :back , :error => 'Email cant be blank.'
