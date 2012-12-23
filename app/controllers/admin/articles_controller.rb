@@ -90,6 +90,11 @@ class Admin::ArticlesController < ApplicationController
     @articles = Article.search_articles(params[:search]).paginate(:all,:page =>page, :per_page =>per_page , :order =>"created_at DESC")
   end
 
+
+  def show_comment
+    @comment = Comment.find(params[:id])
+  end
+
   # DELETE /admin/articles/1
   # DELETE /admin/articles/1.xml
 =begin

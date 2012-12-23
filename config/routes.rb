@@ -13,6 +13,7 @@ Kirisblog::Application.routes.draw do
       get   "manage_article_status",                                   :on => :member
       put   "manage_article_status",                                   :on => :member
       get "search",                                                    :on => :collection
+      get  "show_comment",                                             :on => :member
     end
 
     resources :users ,:only=>[:index, :show]  do

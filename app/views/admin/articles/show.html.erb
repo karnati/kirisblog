@@ -43,7 +43,7 @@
             <td><%= comment.name %></td>
             <td><%= comment.email %></td>
             <td><%=raw(truncate(comment.description, :length =>50)) %></td>
-            <td>   </span> <i id = "status_<%= comment.id %>">   <%= link_to comment.status? ? "Active" : "Inactive",manage_comment_status_admin_article_path(:id => comment.id)  %> </i> </td>
+            <td>   </span> <i id = "status_<%= comment.id %>">   <%= link_to comment.status? ? "Active" : "Inactive",manage_comment_status_admin_article_path(:id => comment.id)  %> </i>  | <%= link_to "view", show_comment_admin_article_path(comment) %></td>
           </tr>
       <% end %>
 
